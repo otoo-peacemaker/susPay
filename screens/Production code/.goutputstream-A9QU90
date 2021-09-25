@@ -1,0 +1,426 @@
+Container(
+    width: 375,
+    height: 812,
+    color: Colors.white,
+    padding: const EdgeInsets.only(bottom: 26, ),
+    child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children:[
+            Container(
+                width: 375,
+                height: 44,
+                padding: const EdgeInsets.only(left: 21, right: 15, bottom: 11, ),
+                child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children:[
+                        Container(
+                            width: 54,
+                            height: 21,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: FlutterLogo(size: 21),
+                        ),
+                        Container(
+                            width: 219,
+                            height: 30,
+                            child: Stack(
+                                children:[Container(
+                                    width: 219,
+                                    height: 30,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(8),
+                                    ),
+                                ),],
+                            ),
+                        ),
+                        Container(
+                            width: 66.66,
+                            height: 11.34,
+                            padding: const EdgeInsets.only(left: 4, ),
+                            child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children:[
+                                    Container(
+                                        width: 24.33,
+                                        height: 11.33,
+                                        decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(8),
+                                        ),
+                                        child: FlutterLogo(size: 11.333333015441895),
+                                    ),
+                                ],
+                            ),
+                        ),
+                    ],
+                ),
+            ),
+            SizedBox(height: 1.73),
+            Container(
+                width: 375,
+                height: 60,
+                padding: const EdgeInsets.symmetric(horizontal: 20, ),
+                child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children:[
+                        Container(
+                            width: 24,
+                            height: 24,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: FlutterLogo(size: 24),
+                        ),
+                        SizedBox(width: 16),
+                        Container(
+                            width: 24,
+                            height: 24,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: FlutterLogo(size: 24),
+                        ),
+                    ],
+                ),
+            ),
+            SizedBox(height: 1.73),
+            Text(
+                "login",
+                style: TextStyle(
+                    color: Color(0xffffb731),
+                    fontSize: 20,
+                    fontStyle: FontStyle.italic,
+                ),
+            ),
+            SizedBox(height: 1.73),
+            Container(
+                width: 375,
+                padding: const EdgeInsets.symmetric(horizontal: 20, ),
+                child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children:[
+                        SizedBox(
+                            width: double.infinity,
+                            child: Text(
+                                "Register",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Color(0xff283244),
+                                    fontSize: 20,
+                                    fontStyle: FontStyle.italic,
+                                ),
+                            ),
+                        ),
+                        SizedBox(height: 11),
+                        SizedBox(
+                            width: 300,
+                            child: Text(
+                                "Please fill in the form below and do not disclose your to anyone.",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Color(0xff707e94),
+                                    fontSize: 16,
+                                ),
+                            ),
+                        ),
+                    ],
+                ),
+            ),
+            SizedBox(height: 1.73),
+            Container(
+                width: 375,
+                color: Colors.white,
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 32, ),
+                child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children:[
+                        Container(
+                            width: double.infinity,
+                            height: 63,
+                            child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children:[
+                                    SizedBox(
+                                        width: 343,
+                                        height: 20,
+                                        child: Text(
+                                            "Phone Number",
+                                            style: TextStyle(
+                                                color: Color(0xff5a667a),
+                                                fontSize: 16,
+                                            ),
+                                        ),
+                                    ),
+                                    Container(
+                                        width: 335,
+                                        height: 49,
+                                        color: Colors.white,
+                                        padding: const EdgeInsets.only(bottom: 8, ),
+                                        child: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            crossAxisAlignment: CrossAxisAlignment.end,
+                                            children:[
+                                                Expanded(
+                                                    child: SizedBox(
+                                                        height: 30,
+                                                        child: Text(
+                                                            "Enter mobile numberhh",
+                                                            style: TextStyle(
+                                                                color: Color(0xffb9c2d2),
+                                                                fontSize: 16,
+                                                            ),
+                                                        ),
+                                                    ),
+                                                ),
+                                            ],
+                                        ),
+                                    ),
+                                ],
+                            ),
+                        ),
+                        SizedBox(height: 24),
+                        Container(
+                            height: 69,
+                            child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children:[
+                                    SizedBox(
+                                        width: 343,
+                                        height: 20,
+                                        child: Text(
+                                            "National ID",
+                                            style: TextStyle(
+                                                color: Color(0xff5a667a),
+                                                fontSize: 16,
+                                            ),
+                                        ),
+                                    ),
+                                    Container(
+                                        width: 343,
+                                        height: 40,
+                                        color: Colors.white,
+                                        padding: const EdgeInsets.only(bottom: 8, ),
+                                        child: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            crossAxisAlignment: CrossAxisAlignment.end,
+                                            children:[
+                                                SizedBox(
+                                                    width: 224,
+                                                    height: 30,
+                                                    child: Text(
+                                                        "Enter ID number",
+                                                        style: TextStyle(
+                                                            color: Color(0xffb9c2d2),
+                                                            fontSize: 16,
+                                                        ),
+                                                    ),
+                                                ),
+                                            ],
+                                        ),
+                                    ),
+                                ],
+                            ),
+                        ),
+                        SizedBox(height: 24),
+                        Container(
+                            width: double.infinity,
+                            child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children:[
+                                    SizedBox(
+                                        width: 343,
+                                        child: Text(
+                                            "Password",
+                                            style: TextStyle(
+                                                color: Color(0xff707e94),
+                                                fontSize: 14,
+                                            ),
+                                        ),
+                                    ),
+                                    Container(
+                                        width: double.infinity,
+                                        height: 38,
+                                        color: Colors.white,
+                                        padding: const EdgeInsets.only(bottom: 8, ),
+                                        child: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            crossAxisAlignment: CrossAxisAlignment.end,
+                                            children:[
+                                                Expanded(
+                                                    child: SizedBox(
+                                                        child: Text(
+                                                            "*************",
+                                                            style: TextStyle(
+                                                                color: Color(0xffb9c2d2),
+                                                                fontSize: 16,
+                                                            ),
+                                                        ),
+                                                    ),
+                                                ),
+                                            ],
+                                        ),
+                                    ),
+                                ],
+                            ),
+                        ),
+                        SizedBox(height: 24),
+                        Container(
+                            width: double.infinity,
+                            child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children:[
+                                    SizedBox(
+                                        width: 343,
+                                        child: Text(
+                                            "Confirm Password",
+                                            style: TextStyle(
+                                                color: Color(0xff707e94),
+                                                fontSize: 14,
+                                                fontStyle: FontStyle.italic,
+                                            ),
+                                        ),
+                                    ),
+                                    Container(
+                                        width: double.infinity,
+                                        height: 38,
+                                        color: Colors.white,
+                                        padding: const EdgeInsets.only(bottom: 8, ),
+                                        child: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            crossAxisAlignment: CrossAxisAlignment.end,
+                                            children:[
+                                                Expanded(
+                                                    child: SizedBox(
+                                                        child: Text(
+                                                            "*************",
+                                                            style: TextStyle(
+                                                                color: Color(0xffb9c2d2),
+                                                                fontSize: 16,
+                                                            ),
+                                                        ),
+                                                    ),
+                                                ),
+                                            ],
+                                        ),
+                                    ),
+                                ],
+                            ),
+                        ),
+                        SizedBox(height: 24),
+                        Container(
+                            width: double.infinity,
+                            child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children:[
+                                    SizedBox(
+                                        width: 343,
+                                        child: Text(
+                                            "ZIP Code",
+                                            style: TextStyle(
+                                                color: Color(0xff707e94),
+                                                fontSize: 14,
+                                            ),
+                                        ),
+                                    ),
+                                    Container(
+                                        width: double.infinity,
+                                        height: 38,
+                                        color: Colors.white,
+                                        padding: const EdgeInsets.only(bottom: 8, ),
+                                        child: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            crossAxisAlignment: CrossAxisAlignment.end,
+                                            children:[
+                                                Expanded(
+                                                    child: SizedBox(
+                                                        child: Text(
+                                                            "*************",
+                                                            style: TextStyle(
+                                                                color: Color(0xffb9c2d2),
+                                                                fontSize: 16,
+                                                            ),
+                                                        ),
+                                                    ),
+                                                ),
+                                            ],
+                                        ),
+                                    ),
+                                ],
+                            ),
+                        ),
+                    ],
+                ),
+            ),
+            SizedBox(height: 1.73),
+            SizedBox(
+                width: 312,
+                child: Text(
+                    "By submitting this application you confirm that you are authorized to share this information and agree with our Term and Conditions",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 12,
+                    ),
+                ),
+            ),
+            SizedBox(height: 1.73),
+            Container(
+                width: 343,
+                height: 60,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    boxShadow: [
+                        BoxShadow(
+                            color: Color(0xff75aeff),
+                            blurRadius: 16,
+                            offset: Offset(0, 4),
+                        ),
+                    ],
+                    color: Color(0xff18b832),
+                ),
+                padding: const EdgeInsets.all(16),
+                child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children:[
+                        Text(
+                            "Send verification code",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontStyle: FontStyle.italic,
+                            ),
+                        ),
+                    ],
+                ),
+            ),
+        ],
+    ),
+)
