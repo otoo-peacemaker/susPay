@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_ellipse"
+    tools:context=".Activities.smsVerification">
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_margin"
+            android:layout_marginTop="@dimen/layout_margin_Top1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/common_margin"
+                android:padding="@dimen/common_padding"
+                android:text="@string/verification"
+                android:textColor="@color/opt_color"
+                android:textSize="@dimen/headingText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/text_colors"
+                android:padding="@dimen/common_padding"
+                android:text="@string/verification_code_notices"
+                android:textAlignment="center"
+                android:textSize="@dimen/notification" />
+
+            <com.chaos.view.PinView
+                android:id="@+id/smsPinView"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/common_margin"
+                android:cursorVisible="true"
+                android:hint="@string/sms_code"
+                android:inputType="numberPassword"
+                android:itemBackground="@color/white"
+                android:padding="@dimen/common_padding"
+                android:textColor="@color/text_colors"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cursorColor="@color/black"
+                app:cursorWidth="2dp"
+                app:hideLineWhenFilled="false"
+                app:itemCount="6"
+                app:itemHeight="48dp"
+                app:itemRadius="4dp"
+                app:itemSpacing="10dp"
+                app:itemWidth="48dp"
+                app:lineColor="@color/opt_color"
+                app:lineWidth="2dp"
+                app:viewType="rectangle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/text_colors"
+                android:layout_margin="@dimen/common_margin"
+                android:padding="@dimen/common_padding"
+                android:text="@string/didn_t_receive_verification_code"
+                android:textAlignment="center"
+                android:textSize="@dimen/textView_fontSize" />
+
+            <TextView
+                android:id="@+id/textViewButtonResend"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textView_fontSize"
+                android:textColor="@color/button"
+                android:text="@string/resend" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/verificationBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="onSubmitVerification"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout >

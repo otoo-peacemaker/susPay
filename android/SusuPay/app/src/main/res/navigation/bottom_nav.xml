@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@drawable/bottom_home"
+    android:id="@+id/bottom_nav">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.susupay.Activities.Home"
+        android:label="@string/title_home"
+        tools:layout="@layout/activity_home" />
+
+    <fragment
+        android:id="@+id/navigation_bottom_transaction"
+        android:name="com.example.susupay.Activities.Transaction"
+        android:label="@string/transaction"
+        tools:layout="@layout/activity_transaction" />
+
+    <fragment
+        android:id="@+id/navigation_bottom_profile"
+        android:name="com.example.susupay.Activities.Profile"
+        android:label="@string/title_profile"
+        tools:layout="@layout/activity_profile" />
+
+</navigation>

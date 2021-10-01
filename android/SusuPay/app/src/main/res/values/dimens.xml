@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--fonts sizes-->
+    <dimen name="text_hint_fontSize">15sp</dimen>
+    <dimen name="textView_fontSize">18sp</dimen>
+    <dimen name="headingText">20sp</dimen>
+    <dimen name="prompt_fontSize">13sp</dimen>
+    <dimen name="notification">16sp</dimen>
+    <dimen name="EditTextFonts">17sp</dimen>
+
+    <!--dimensional-->
+    <dimen name="layout_margin_Top1">20dp</dimen>
+    <dimen name="common_padding">5dp</dimen>
+    <dimen name="common_margin">10dp</dimen>
+    <dimen name="cardElevation">5dp</dimen>
+    <dimen name="cardCornerRadius">10dp</dimen>
+</resources>

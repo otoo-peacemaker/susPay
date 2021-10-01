@@ -1,0 +1,74 @@
+[
+    {
+        "depositeVendor": "mtn",
+        "accountNumber": "FID-19091221312",
+        "username": "Peacemaker Nana Kwesi",
+        "amountToWithdraw": "50",
+        "accountType": "Saving",
+        "date" :"01-010-2021"
+    },
+    {
+        "depositeVendor": "voafone",
+        "accountNumber": "FID-19091221313",
+        "username": "Jonathan Abayei",
+        "amountToWithdraw": "",
+        "accountType": "flip",
+        "date" :"01-010-2021"
+    },
+    {
+        "depositeVendor": "mtn",
+        "accountNumber": "FID-19091221313",
+        "username": "Jonathan Abayei",
+        "amountToWithdraw": "",
+        "accountType": "flip",
+        "date" :"01-010-2021"
+    },
+    {
+        "depositeVendor": "voafone",
+        "accountNumber": "FID-19091221313",
+        "username": "Jonathan Abayei",
+        "amountToWithdraw": "",
+        "accountType": "flip",
+        "date" :"01-010-2021"
+    },
+    {
+        "depositeVendor": "voafone",
+        "accountNumber": "FID-19091221313",
+        "username": "Jonathan Abayei",
+        "amountToWithdraw": "",
+        "accountType": "flip",
+        "date" :"01-010-2021"
+    },
+    {
+        "depositeVendor": "voafone",
+        "accountNumber": "FID-19091221313",
+        "username": "Jonathan Abayei",
+        "amountToWithdraw": "",
+        "accountType": "flip",
+        "date" :"01-010-2021"
+    },
+    {
+        "depositeVendor": "airtel",
+        "accountNumber": "FID-19091221313",
+        "username": "Jonathan Abayei",
+        "amountToWithdraw": "",
+        "accountType": "savings",
+        "date" :"01-010-2021"
+    },
+    {
+        "depositeVendor": "mtn",
+        "accountNumber": "FID-19091221312",
+        "username": "Peacemaker Nana Kwesi",
+        "amountToWithdraw": "50",
+        "accountType": "Saving",
+        "date" :"01-010-2021"
+    },
+    {
+        "depositeVendor": "airtel",
+        "accountNumber": "FID-19091221313",
+        "username": "Jonathan Abayei",
+        "amountToWithdraw": "",
+        "accountType": "flip",
+        "date" :"01-010-2021"
+    }
+]

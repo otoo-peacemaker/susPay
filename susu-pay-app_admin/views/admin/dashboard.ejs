@@ -1,0 +1,170 @@
+<%- include('../includes/header-ap.ejs') %>
+
+    <section class="container">
+        <div class="items item-1">
+            <img src="/dist/icons/logo.png" alt="logo">
+            <div class="nav-items">
+                <img src="/dist/icons/icons8_grid_2.ico" alt="grid-icon">
+                <img src="/dist/icons/icons8_doorbell.ico" alt="notification-icon">
+                <img src="/dist/icons/icons8_cloud_account_login_male_100px.png" alt="profile-image">
+                <div>
+                    <p>Admin</p>
+                    <p>User Profile</p>
+                </div>
+            </div>
+        </div>
+        <div></div>
+        
+        <div class="items item-3">
+            <div class="top__main">
+                <h2 id="student__id-view">Account number id <span> FID-19091221312</span></h2>
+                <div class="top__main-card">
+                <div class="stack">
+                    <figure class="cards card1">
+                        <div class="title">
+                            <p class="title__company">Simple</p>
+                            <img class="title-logo" src="/dist/icons/icons8_mastercard_logo.ico" alt="card-logo">
+                        </div>
+                        <div class="cards__number">
+                            <p class="cards__number-num">8298 2672 628 332</p>
+                        </div>
+                        <div class="cards-detail">
+                            <div class="p-holder">
+                                <p>card holder name</p>
+                                <p>  Peacemaker Nana Kwesi </p>
+                            </div>
+                            <div class="date">
+                                <p>expire date</p>
+                                <p>02/23</p>
+                            </div>
+                            
+                            
+                        </div>
+                    </figure>
+                </div>
+                <div class="stack">
+                    <figure class="cards card2">
+                        <div class="title">
+                            <p class="title__company">Simple</p>
+                            <img class="title-logo" src="/dist/icons/icons8_mastercard_logo.ico" alt="card-logo">
+                        </div>
+                        <div class="cards__number">
+                            <p class="cards__number-num">024 6524 300</p>
+                        </div>
+                        <div class="cards-detail">
+                            <div class="p-holder">
+                                <p>card holder name</p>
+                                <p>  Peacemaker Nana Kwesi </p>
+                            </div>
+                            <div class="date">
+                                <p>expire date</p>
+                                <p>02/23</p>
+                            </div>
+                            
+                            
+                        </div>
+                    </figure>
+                </div>
+                </div>
+            </div>
+            <div class="middle__main">
+                <figure>
+                    <h4> Account transcation pay</h4>
+                    
+                    <div class="paylist">
+                        <a href="/admin/my-transcations" style="text-decoration:none; color:black">
+                        <figcaption class="paylist-item">
+                            <div id="fees"><img src="/dist/icons/icons8_apply.ico" alt="" />
+                               </div>
+                            <p> Transcation </p>
+                        </figcaption>
+                        </a>
+
+                        <a href="/admin/my-cards" style="text-decoration: none; color:black">
+                        <figcaption class="paylist-item">
+                            <div id="dues"><img src="/dist/icons/icons8_money_box.ico" alt="" />
+                               </div>
+                            <p> Deposite </p>
+                        </figcaption>
+                        </a>
+                       
+
+                        <a href="/admin/my-payments" style="text-decoration: none; color:black">
+                        <figcaption class="paylist-item">
+                            <div id="resit"><img src="/dist/icons/icons8_hand_with_pen.ico" alt="" />
+                                </div>
+                            <p> Payment </p>
+                        </figcaption>
+                        </a>
+
+                    
+                        <a href="/admin/my-transcations"   style="text-decoration: none; color:black">
+                        <figcaption class="paylist-item">
+                            <div id="testimonial"><img src="/dist/icons/icons8_bill.ico" alt="" />
+                                </div>
+                            <p> Account </p>
+                        </figcaption>
+                        </a>
+                    </div>
+                </figure>
+
+                <section class="mobile__pay">
+                    <h4>Mobile payment</h4>
+                    <div class="mobile__pay-network">
+                        <div class="services service1"><img src="/dist/images/mtn.jpg" alt="">   <p> mtn momo </p></div>
+                        <div class="services service2"><img src="/dist/images/voda.png" alt="">   <p> vodafone cash </p></div>
+                        <div class="services service3"><img src="/dist/images/tigo.jpg" alt="">   <p> tigo pay </p></div>
+                    </div>
+                </section>
+            </div>
+            <div class="side__main">
+                <section class="quick-pay">
+                    <h4>Quick payment</h4>
+                    <div class="quick-pay-form">
+                        <div class="option">
+                            <h5>choose method</h5>
+                        </div>
+                        <form action="" class="payment-form">
+                            <div class="card-input">
+                                <input type="text" placeholder="enter card or  phone  number">
+                            </div>
+                            <div class="card-input">
+                                <input type="text" placeholder="enter amount">
+                            </div>
+                            <a href="#">next <span><img src="" alt=""></span></a>
+                        </form>
+                    </div>
+                </section>
+
+             <section class="payment-notification">
+                <h4>Notification</h4>
+                <% if (deposites.length > 0) { %>
+                <div class="payment-notification-list">
+                    <% for(let deposit of deposites) { %>
+                    <figure class="notice">
+                        
+                        <div class="notice-img"><img src="/dist/icons/Ellipse 38.png" alt="profile"></div>
+                        <figcaption>
+                            <h6> Transcation made </h6>
+                            <p><span style="color: black;" class="amt"> Deposit :: <%= deposit.accountNumber %></span></p>
+                            <p> <span style="color: black;"  class="status"> Name : <%= deposit.username %></span></p>
+                            <p><span  style="color: black;" class="status"> Account Type : <%= deposit.accountType %></span>  </p>
+                            <p><span style="color: black;" class="status"> Amount Deposited : &cent; <%= deposit.amountToWithdraw %></span>  </p>
+                        </figcaption>
+                    </figure>
+                    <% } %>
+                    <%  } else { %>
+                        <h4> No transcations yet </h4>
+                  <% } %>
+                </div>
+            </section>
+            </div>
+        </div>
+    </section>
+
+
+    <%- include('../includes/navigation-ap.ejs') %>
+ 
+    <%- include('../includes/footer-ap.ejs') %>
+
+

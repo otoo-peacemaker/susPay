@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_ellipse"
+    tools:context=".Activities.Registration">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="405dp"
+        android:layout_height="39dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:paddingTop="2dp"-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:background="?attr/colorPrimary"-->
+<!--            app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar" />-->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="385dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.116">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/register"
+            android:textColor="@color/opt_color"
+            android:textSize="@dimen/headingText" />
+        <TextView
+            android:id="@+id/textView2"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/notification"
+            android:gravity="center"
+            android:text="@string/assurance_text"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="446dp"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/firstname"
+                android:inputType="textPersonName"
+                android:textSize="@dimen/EditTextFonts" />
+
+            <EditText
+                android:id="@+id/lastname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/lastname"
+                android:inputType="textPersonName"
+                android:textSize="@dimen/EditTextFonts" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/reg_phone_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/enter_phone_number"
+            android:inputType="phone"
+            android:textSize="@dimen/EditTextFonts" />
+
+
+        <EditText
+            android:id="@+id/nationalID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/enter_id"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/text_hint_fontSize" />
+
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/enter_email"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/EditTextFonts" />
+
+
+        <EditText
+            android:id="@+id/password_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+            android:textSize="@dimen/EditTextFonts" />
+
+
+        <EditText
+            android:id="@+id/password_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/enter_password_again"
+            android:inputType="textPassword"
+            android:textSize="@dimen/EditTextFonts" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="@string/term_and_conditions"
+            android:textAlignment="center"
+            android:textSize="@dimen/prompt_fontSize" />
+
+        <Button
+            android:id="@+id/send_verification_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:shadowRadius="10"
+            android:onClick="verificationButton"
+            android:text="@string/send_verification" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "95671502412",
+    "project_id": "susupay-1afb7",
+    "storage_bucket": "susupay-1afb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95671502412:android:2efc5b1105442e696356e9",
+        "android_client_info": {
+          "package_name": "com.example.susupay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95671502412-6jh4cdonadhvq0d4adu21qfcqlvlobqf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.susupay",
+            "certificate_hash": "3cf3ee2d1bbdedf059005743a258681c9ea6e809"
+          }
+        },
+        {
+          "client_id": "95671502412-7q2fumsmnb4f2oc2qnnujoqfivii9uaj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ3suB64BNXKiFq1E_0k1rvhNbA1yvfT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95671502412-7q2fumsmnb4f2oc2qnnujoqfivii9uaj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

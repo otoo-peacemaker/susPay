@@ -1,0 +1,38 @@
+[
+    {
+        "depositeVendor": "mtn",
+        "accountNumber": "FID-19091221312",
+        "toaccountNumber" : "FID-19091221313",
+        "from": "Peacemaker Nana Kwesi",
+        "to" : "Jonathan Abayei",
+        "amountTransfered": "100",
+        "accountType": "Saving"
+    },
+    {
+        "depositeVendor": "vodafone",
+        "accountNumber": "FID-19091221312",
+        "toaccountNumber" : "FID-19091221313",
+        "from": "Aaron Abayie",
+        "to" : "Acquah Samuel",
+        "amountTransfered": "80",
+        "accountType": "Saving"
+    },
+    {
+        "depositeVendor": "vodafone",
+        "accountNumber": "FID-19091221312",
+        "toaccountNumber" : "FID-19091221313",
+        "from": "Jonathan Abayie",
+        "to" : "Acquah Samuel",
+        "amountTransfered": "70",
+        "accountType": "Saving"
+    },
+    {
+        "depositeVendor": "vodafone",
+        "accountNumber": "FID-19091221312",
+        "toaccountNumber" : "FID-19091221313",
+        "from": "Jonathan Abayie",
+        "to" : "Ackom Prince",
+        "amountTransfered": "900",
+        "accountType": "Saving"
+    }
+]

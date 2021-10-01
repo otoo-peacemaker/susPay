@@ -1,0 +1,15 @@
+{
+  "name": "fin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass ./scss/main.scss ./style.css -w"
+  },
+  "author": "creativity",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
+

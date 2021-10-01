@@ -1,0 +1,83 @@
+
+<%- include('../includes/header-ap.ejs') %>
+
+<section class="container">
+    <div class="items item-1">
+        <img src="/dist/icons/logo.png" alt="logo">
+        <div class="nav-items">
+            <img src="/dist/icons/icons8_grid_2.ico" alt="grid-icon">
+            <img src="/dist/icons/icons8_doorbell.ico" alt="notification-icon">
+            <img src="/dist/icons/icons8_cloud_account_login_male_100px.png" alt="profile-image">
+            <div>
+                <p>Admin</p>
+                <p>User Profile</p>
+            </div>
+        </div>
+    </div>
+    <div></div>
+    <div></div>
+    <div class="fee__main">
+        <div class="form__wrap">
+            <div action="" class="form__grid">
+                <h4> Funds Withdrawal </h4>
+                <form action="/admin/my-services" method="POST">
+                  
+                    <div class="field">
+                        <label for="student-id"> Payment method</label>
+                        <div>
+                            <select name="depositeVendor" style="width:100%; padding: .8rem; outline: none; border: 2px solid rgb(228, 227, 226);">
+                                <option value="mtn"> mtn </option>
+                                <option value="vodafone"> vodafone </option>
+                                <option value="airtel"> airtel </option>
+                              </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="programme"> Account number </label>
+                        <div>
+                            <input name="accountNumber" type="text"  placeholder="FID-19091221312">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="level"> username </label>
+                        <div>
+                            <input name="username" type="text" placeholder="Peacemaker Nana Kwesi">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="amount" > Amount to draw </label>
+                        <div>
+                            <input  name="amountToWithdraw" type="text">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="student-id"> With From Service </label>
+                        <div>
+                            <select name="accountType" style="width:100%; padding: .8rem; outline: none; border: 2px solid rgb(228, 227, 226);">
+                                <option value="savings"> saving account </option>
+                                <option value="savings"> current account </option>
+                                <option value="filp"> filp accout </option>
+                              </select>
+                        </div>
+                    </div>
+
+                 
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <button class="btn" type="submit"> Done </button> <br>  
+                </form>
+            </div>
+
+         
+        </div>
+    </div>
+    
+    
+</section>
+
+
+
+<%- include('../includes/navigation-ap.ejs') %>
+
+<%- include('../includes/footer-ap.ejs') %>

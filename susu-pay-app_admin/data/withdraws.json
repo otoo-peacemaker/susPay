@@ -1,0 +1,30 @@
+[
+    {
+        "depositeVendor": "mtn",
+        "accountNumber": "FID-19091221312",
+        "username": "Peacemaker Nana Kwesi",
+        "amountToWithdraw": "50",
+        "accountType": "Saving"
+    },
+    {
+        "depositeVendor": "voafone",
+        "accountNumber": "FID-19091221313",
+        "username": "Jonathan Abayei",
+        "amountToWithdraw": "",
+        "accountType": "flip"
+    },
+    {
+        "depositeVendor": "mtn",
+        "accountNumber": "FID-19091221312",
+        "username": "Peacemaker Nana Kwesi",
+        "amountToWithdraw": "50",
+        "accountType": "Saving"
+    },
+    {
+        "depositeVendor": "voafone",
+        "accountNumber": "FID-19091221313",
+        "username": "Jonathan Abayei",
+        "amountToWithdraw": "",
+        "accountType": "flip"
+    }
+]
