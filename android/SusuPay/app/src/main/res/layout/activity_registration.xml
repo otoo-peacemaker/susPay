@@ -1,32 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_ellipse"
     tools:context=".Activities.Registration">
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="405dp"
-        android:layout_height="39dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-<!--        <androidx.appcompat.widget.Toolbar-->
-<!--            android:paddingTop="2dp"-->
-<!--            android:id="@+id/toolbar"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="?attr/actionBarSize"-->
-<!--            android:background="?attr/colorPrimary"-->
-<!--            app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar" />-->
-
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout4"
@@ -38,7 +17,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.116">
 
         <TextView
@@ -48,15 +27,16 @@
             android:text="@string/register"
             android:textColor="@color/opt_color"
             android:textSize="@dimen/headingText" />
+
         <TextView
             android:id="@+id/textView2"
-            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/notification"
             android:gravity="center"
+            android:padding="10dp"
             android:text="@string/assurance_text"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textSize="@dimen/notification" />
     </LinearLayout>
 
     <LinearLayout
@@ -83,6 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:autofillHints="username"
                 android:ems="10"
                 android:hint="@string/firstname"
                 android:inputType="textPersonName"
@@ -93,6 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/lastname"
                 android:inputType="textPersonName"
@@ -104,11 +86,11 @@
             android:id="@+id/reg_phone_num"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints="number"
             android:ems="10"
             android:hint="@string/enter_phone_number"
             android:inputType="phone"
             android:textSize="@dimen/EditTextFonts" />
-
 
         <EditText
             android:id="@+id/nationalID"
@@ -119,7 +101,6 @@
             android:inputType="textPersonName"
             android:textSize="@dimen/text_hint_fontSize" />
 
-
         <EditText
             android:id="@+id/editTextTextEmailAddress"
             android:layout_width="match_parent"
@@ -128,7 +109,6 @@
             android:hint="@string/enter_email"
             android:inputType="textEmailAddress"
             android:textSize="@dimen/EditTextFonts" />
-
 
         <EditText
             android:id="@+id/password_1"
@@ -165,7 +145,6 @@
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:shadowRadius="10"
-            android:onClick="verificationButton"
             android:text="@string/send_verification" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

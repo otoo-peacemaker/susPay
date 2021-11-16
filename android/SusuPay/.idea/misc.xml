@@ -4,14 +4,33 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/anime.xml" value="0.21302083333333333" />
         <entry key="app/src/main/res/drawable/arrow_back.xml" value="0.21302083333333333" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_deposit.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_history_list.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.14345991561181434" />
+        <entry key="app/src/main/res/layout/activity_password_verification.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_profile2.xml" value="0.1734375" />
         <entry key="app/src/main/res/layout/activity_registration.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_sms_verification.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_transaction.xml" value="0.18125" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_transaction.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_transaction_history.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_verify_number.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_withdraw.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/content_withdraw.xml" value="0.13425925925925927" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.196875" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.196875" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/fragment_profile_details.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.196875" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_transaction.xml" value="0.196875" />
         <entry key="app/src/main/res/menu/bottom_nav_bar.xml" value="0.17604166666666668" />
+        <entry key="app/src/main/res/menu/bottom_nav_view.xml" value="0.196875" />
         <entry key="app/src/main/res/menu/registration_menu.xml" value="0.196875" />
       </map>
     </option>

@@ -6,6 +6,12 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/app_logo"
@@ -14,7 +20,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SusuPay">
         <activity
-            android:name=".Profile"
+            android:name=".Activities.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TransactionHistory"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VerifyNumber"
+            android:exported="true" />
+        <activity
+            android:name=".PasswordVerification"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.Withdraw"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.Deposit"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.smsVerification"
             android:exported="true" />
         <activity
             android:name=".Activities.Transaction"
@@ -26,13 +53,10 @@
             android:name=".Activities.Home"
             android:exported="true" />
         <activity
-            android:name=".Activities.smsVerification"
-            android:exported="true" />
-        <activity
             android:name=".Activities.Registration"
             android:exported="true" />
         <activity
-            android:name=".Activities.MainActivity"
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

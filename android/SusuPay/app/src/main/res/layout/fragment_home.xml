@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_ellipse"
-    tools:context=".Activities.Home">
+    tools:context=".Navbottom.FragmentHome">
+
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
@@ -78,16 +79,17 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/deposit_img_btn"
                 android:layout_width="50dp"
                 android:layout_height="60dp"
                 android:layout_marginEnd="50dp"
                 android:background="@drawable/deposite_text"
+                android:clickable="true"
                 android:contentDescription="@string/deposit"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 tools:ignore="ImageContrastCheck" />
 
             <ImageButton
-                android:id="@+id/withdraw_img_btn"
                 android:layout_width="50dp"
                 android:layout_height="60dp"
                 android:layout_marginEnd="50dp"
@@ -99,7 +101,6 @@
                 tools:ignore="ImageContrastCheck" />
 
             <ImageButton
-                android:id="@+id/trx_img_btn"
                 android:layout_width="50dp"
                 android:layout_height="60dp"
                 android:background="@drawable/transaction_text"
