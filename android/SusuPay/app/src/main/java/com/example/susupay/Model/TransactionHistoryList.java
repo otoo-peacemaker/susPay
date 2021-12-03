@@ -1,4 +1,4 @@
-package model;
+package com.example.susupay.Model;
 
 import java.sql.Blob;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package model;
+package com.example.susupay.Model;
 
 public class RegistrarClass {
     public String id, firstname, lastname, password;
