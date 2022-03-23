@@ -29,7 +29,6 @@ import java.util.Objects;
 
 public class Registration extends AppCompatActivity {
 
-
     private Toolbar toolbar;
     private EditText firstname, lastname, phoneNum, NationalID, email, password1, password2;
     private Button sendVerification;
@@ -59,39 +58,8 @@ public class Registration extends AppCompatActivity {
             }
         });
 
-
-
-
-        //You can set your progress bar here before the firebase authentication
-        //mAuth = FirebaseAuth.getInstance();
-
-
-//        toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//
-//        toolbar.setNavigationIcon(R.drawable.arrow_back);
-//        //setting the app title
-//        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
-//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
-//
-
-
     }
 
-    //handle user before login method
-   /* @Override
-    protected void onStart() {
-        super.onStart();
-        if (mAuth.getCurrentUser() != null) {
-            //handle the already login user
-        }
-    }
-*/
     public void registerUser() {
         String userFirstname, userLastname, userPassword1, userPassword2;
         String userPhoneNum, userNationalID, userRegistrationEmail;
@@ -110,37 +78,31 @@ public class Registration extends AppCompatActivity {
 //            editTextName.setError(getString(R.string.input_error_name));
 //            userFirstname.requestFocus();
             Toast.makeText(this, "field empty", Toast.LENGTH_SHORT).show();
-        }
-        else if (TextUtils.isEmpty(userLastname)) {
+        } else if (TextUtils.isEmpty(userLastname)) {
             Toast.makeText(this, "field empty", Toast.LENGTH_SHORT).show();
-        }
-        else if (TextUtils.isEmpty(userPassword1) && userPassword1.length() < 6) {
+        } else if (TextUtils.isEmpty(userPassword1) && userPassword1.length() < 6) {
             if (TextUtils.isEmpty(userPassword2) && userPassword2.length() < 6) {
                 if (!userPassword1.equals(userPassword2)) {
                     Toast.makeText(this, "incorrect password", Toast.LENGTH_SHORT).show();
                 }
             }
-        }
-        else if (TextUtils.isEmpty(userPhoneNum) || userPhoneNum.length() < 10) {
+        } else if (TextUtils.isEmpty(userPhoneNum) || userPhoneNum.length() < 10) {
             Toast.makeText(this, "Enter 10 digit number", Toast.LENGTH_SHORT).show();
-        }
-        else if (TextUtils.isEmpty(userNationalID)) {
+        } else if (TextUtils.isEmpty(userNationalID)) {
             Toast.makeText(this, "field empty", Toast.LENGTH_SHORT).show();
-        }
-        else if (TextUtils.isEmpty(userRegistrationEmail) || !Patterns.EMAIL_ADDRESS
+        } else if (TextUtils.isEmpty(userRegistrationEmail) || !Patterns.EMAIL_ADDRESS
                 .matcher(userRegistrationEmail)
                 .matches()) {
             Toast.makeText(this, "incorrect email", Toast.LENGTH_SHORT).show();
-        }
-        else{
+        } else {
             //sending data to the firebase realtime Database and I am using the phone number as unique id
             databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     //checking if phone number is not already registered
-                    if (snapshot.hasChild(userPhoneNum)){
+                    if (snapshot.hasChild(userPhoneNum)) {
                         Toast.makeText(Registration.this, "Phone already registered", Toast.LENGTH_SHORT).show();
-                    }else {
+                    } else {
                         databaseReference.child("users").child(userPhoneNum).child("firstname").setValue(userFirstname);
                         databaseReference.child("users").child(userPhoneNum).child("lastname").setValue(userLastname);
                         databaseReference.child("users").child(userPhoneNum).child("userID").setValue(userNationalID);
@@ -160,59 +122,6 @@ public class Registration extends AppCompatActivity {
             });
 
 
-
-
         }
-
-        /*//FIREBASE HANDLER
-        mAuth.signInWithEmailAndPassword(userRegistrationEmail, userPassword2)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            //if email and password is successfully passed add the following as well
-                            RegistrarClass customers = new RegistrarClass(
-                                    userFirstname,
-                                    userLastname,
-                                    userNationalID,
-                                    userPhoneNum
-                            );//end of constructor class
-
-                            FirebaseDatabase.getInstance().getReference("Customers")
-                                    .child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid())
-                                    .setValue(customers)
-                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<Void> task) {
-                                            if (task.isSuccessful()) {
-                                                Toast.makeText(Registration.this, "passed", Toast.LENGTH_SHORT).show();
-                                            } else {
-                                                Toast.makeText(Registration.this, "make sure all fields are filled", Toast.LENGTH_LONG).show();
-                                            }
-                                        }
-                                    });
-
-                        }//end of successful task
-                        else {
-                            Toast.makeText(Registration.this, Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_LONG).show();
-                        }
-                    }
-                }); //END OF FIREBASE HANDLER
-        */
     }
-
-    /*public void verificationButton(View view) {
-        switch (view.getId()) {
-            case R.id.send_verification_button:
-                registerUser();
-                break;
-            case R.id.verificationBtn:
-                Intent intent = new Intent(this, smsVerification.class);
-                startActivity(intent);
-                break;
-            default:
-                Toast.makeText(this, "no screen navigation", Toast.LENGTH_SHORT).show();
-        }
-
-    }*/
 }
