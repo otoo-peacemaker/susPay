@@ -1,14 +1,16 @@
-package com.example.susupay;
+package com.example.susupay.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Profile extends AppCompatActivity {
+import com.example.susupay.R;
+
+public class Withdraw extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile2);
+        setContentView(R.layout.activity_withdraw);
     }
 }

@@ -20,7 +20,7 @@
     <string name="enter_password_again">Enter Password again</string>
     <string name="term_and_conditions">By submitting this application you confirm that you are authorized to share this information and agree with our Term and Conditions</string>
     <string name="send_verification">Send verification</string>
-    <string name="registeration">Register</string>
+    <string name="registration">Register</string>
     <string name="verification">Verification</string>
     <string name="verification_code_notices">Verify the mobile number by entering the verification code</string>
     <string name="sms_code">sms code</string>
@@ -42,4 +42,52 @@
     <string name="mini_password">Minimum Password</string>
     <string name="my_email">infofeedacc@gmail.com</string>
     <string name="settings">settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="personal_information">personal information</string>
+    <string name="account_number">Account number</string>
+    <string name="_233245518918">+233245518918</string>
+    <string name="zip_code">Zipc ode</string>
+    <string name="Residence">Resindence</string>
+    <string name="id_number">xxx-xxx-xxxx</string>
+    <string name="geo_location">Geo-location</string>
+    <string name="town_city">Fiapre, Sunyani.</string>
+    <string name="device_information">Device information</string>
+    <string name="primary_device">Primary device</string>
+    <string name="samsung_a50">Samsung A50</string>
+    <string name="app_version">App version</string>
+    <string name="customer_deposit">Desposit</string>
+    <string name="select_service">Select service</string>
+    <string name="confirm_account_number">Confirm account number</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="kwesi_Welbred">Kwesi Welbred</string>
+    <string name="confirm_username">Confirm username</string>
+    <string name="send">Send</string>
+    <string name="title_activity_withdraw">Withdraw</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="bank_image">bankImage</string>
+    <string name="enter_verification_code">Enter verification code</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="confirm_new_password">Confirm password</string>
+    <string name="reset">reset</string>
+    <string name="password_reset">Password reset</string>
+    <string name="verify_number">Verify number</string>
+    <string name="service_image">service Image</string>
+    <string name="logo">logo</string>
+    <string name="notification">notification</string>
+    <string name="transaction_btn">transaction</string>
+    <string name="graph">graph</string>
+    <string name="title_transaction">Transactions</string>
+    <string name="transaction_withdraw_date">Date</string>
+    <string name="amount_deposit">-246,789</string>
+    <string name="date_range">Date range</string>
+    <string name="customer_withdraw">Withdraw</string>
+    <string name="welcome_message">welcome, start managing your finance</string>
 </resources>

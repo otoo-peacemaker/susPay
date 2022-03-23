@@ -7,6 +7,36 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_ellipse"
     tools:context=".Activities.smsVerification">
+    <LinearLayout
+        android:id="@+id/profile_l_out1"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="110dp"
+            android:clickable="true"
+            android:contentDescription="@string/bank_image"
+            android:focusable="true"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="150dp"
+            android:text="@string/registration"
+            android:textColor="@color/opt_color"
+            android:textSize="@dimen/textView_fontSize" />
+    </LinearLayout>
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
@@ -33,7 +63,6 @@
                 android:text="@string/verification"
                 android:textColor="@color/opt_color"
                 android:textSize="@dimen/headingText" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -95,7 +124,6 @@
                 android:textColor="@color/button"
                 android:text="@string/resend" />
 
-
         </LinearLayout>
     </ScrollView>
 
@@ -108,7 +136,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:onClick="onSubmitVerification"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout >

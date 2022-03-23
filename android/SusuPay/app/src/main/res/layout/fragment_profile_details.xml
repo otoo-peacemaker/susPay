@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_ellipse"
+    tools:context=".Activities.ProfileDetails">
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:paddingTop="@dimen/common_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:elevation="@dimen/common_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/personal_information"
+            android:textSize="@dimen/textView_fontSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="119dp"
+                android:text="@string/account_number"
+                android:textSize="@dimen/textView_fontSize" />
+
+            <TextView
+                android:id="@+id/acc_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_padding"
+                android:text="@string/_233245518918"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textView_fontSize" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="132dp"
+                android:text="@string/phone_number"
+                android:textSize="@dimen/textView_fontSize" />
+
+            <TextView
+                android:id="@+id/user_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_padding"
+                android:text="@string/_233245518918"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textView_fontSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="180dp"
+                android:text="@string/zip_code"
+                android:textSize="@dimen/textView_fontSize" />
+
+            <TextView
+                android:id="@+id/zip_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_padding"
+                android:text="@string/_233245518918"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textView_fontSize" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:elevation="@dimen/common_padding"
+            android:text="@string/Residence"
+            android:textSize="@dimen/textView_fontSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="180dp"
+                android:text="@string/national_id"
+                android:textSize="@dimen/textView_fontSize" />
+
+            <TextView
+                android:id="@+id/id_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:padding="@dimen/common_padding"
+                android:text="@string/id_number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textView_fontSize" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="132dp"
+                android:text="@string/geo_location"
+                android:textSize="@dimen/textView_fontSize" />
+
+            <TextView
+                android:id="@+id/user_geo_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:padding="@dimen/common_padding"
+                android:text="@string/town_city"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textView_fontSize" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:elevation="@dimen/common_padding"
+            android:text="@string/device_information"
+            android:textSize="@dimen/textView_fontSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="150dp"
+                android:text="@string/primary_device"
+                android:textSize="@dimen/textView_fontSize" />
+
+            <TextView
+                android:id="@+id/device_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:padding="@dimen/common_padding"
+                android:text="@string/id_number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textView_fontSize" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="150dp"
+                android:text="@string/app_version"
+                android:textSize="@dimen/textView_fontSize" />
+
+            <TextView
+                android:id="@+id/app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:padding="@dimen/common_padding"
+                android:text="@string/samsung_a50"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textView_fontSize" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
