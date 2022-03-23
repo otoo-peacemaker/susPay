@@ -35,38 +35,38 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_colors"
             android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
-            android:textSize="@dimen/textView_fontSize"
-            android:text="@string/email" />
+            android:text="@string/email"
+            android:textColor="@color/text_colors"
+            android:textSize="@dimen/textView_fontSize" />
 
         <EditText
             android:id="@+id/phone_num"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:textSize="@dimen/text_hint_fontSize"
             android:hint="@string/enter_email"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/text_hint_fontSize" />
 
         <TextView
-            android:textColor="@color/text_colors"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
-            android:textSize="@dimen/textView_fontSize"
-            android:text="@string/password" />
+            android:text="@string/password"
+            android:textColor="@color/text_colors"
+            android:textSize="@dimen/textView_fontSize" />
 
         <EditText
             android:id="@+id/Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:textSize="@dimen/text_hint_fontSize"
             android:hint="@string/enter_password"
-            android:inputType="textPassword">
+            android:inputType="textPassword"
+            android:textSize="@dimen/text_hint_fontSize">
 
         </EditText>
 
@@ -77,16 +77,16 @@
             android:layout_gravity="end"
             android:clickable="true"
             android:focusable="true"
-            android:textSize="@dimen/prompt_fontSize"
             android:text="@string/forget_password"
-            android:textColor="@color/opt_color" />
+            android:textColor="@color/opt_color"
+            android:textSize="@dimen/prompt_fontSize" />
 
         <Button
             android:id="@+id/login_button"
-            android:paddingTop="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
+            android:paddingTop="2dp"
             android:shadowRadius="5"
             android:text="@string/login" />
 
@@ -119,20 +119,28 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
             android:text="@string/don_t_you_have_an_account"
             android:textSize="15sp"
             android:textStyle="italic" />
+
         <TextView
             android:id="@+id/login_register_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="true"
-            android:textSize="@dimen/textView_fontSize"
-            android:text="@string/registeration"
             android:onClick="RegistrationBtn"
-            android:textColor="@color/opt_color" />
+            android:text="@string/registeration"
+            android:textColor="@color/opt_color"
+            android:textSize="@dimen/textView_fontSize" />
 
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="422dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
