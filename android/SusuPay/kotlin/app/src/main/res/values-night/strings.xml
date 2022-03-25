@@ -1,7 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Kotlin</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="permission_required_toast">permission required</string>
     <string name="location_permission_denied">location permission denied</string>
     <string name="permission_rationale_location">permission rational location</string>
