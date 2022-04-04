@@ -7,6 +7,7 @@ import javax.inject.Provider
 import javax.inject.Singleton
 
 @Singleton
+@SuppressWarnings("unchecked")
 class ViewModelFactory  @Inject constructor(var creators: MutableMap<Class<out ViewModel>, Provider<ViewModel>>) :
     ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

@@ -1,6 +1,5 @@
 package com.example.kotlin.webservices
 
-import com.example.kotlin.repository.NetworkConnection
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

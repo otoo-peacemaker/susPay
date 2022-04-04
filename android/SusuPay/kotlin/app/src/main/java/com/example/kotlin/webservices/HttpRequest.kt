@@ -1,14 +1,18 @@
-package com.example.kotlin.repository.remote
+package com.example.kotlin.webservices
 
 import android.util.Log
 import com.example.kotlin.dao.Auths
 import com.example.kotlin.dao.AuthsResponse
-import com.example.kotlin.webservices.ApiInterface
+import com.example.kotlin.repository.remote.AuthRepository
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class HttpRequest(private val networkCall: ApiInterface) : AuthRepository {
+@Singleton
+class HttpRequest @Inject constructor(private val networkCall: ApiInterface) : AuthRepository {
+
     override fun login(userBody: Auths): Observable<AuthsResponse> {
         return networkCall.loginUser(userBody).subscribeOn(Schedulers.io())
             .doOnNext {

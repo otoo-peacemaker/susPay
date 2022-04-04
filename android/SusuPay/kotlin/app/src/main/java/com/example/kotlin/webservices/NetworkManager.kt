@@ -1,4 +1,4 @@
-package com.example.kotlin.repository
+package com.example.kotlin.webservices
 
 import android.annotation.SuppressLint
 import android.net.ConnectivityManager
@@ -42,3 +42,4 @@ class NetworkConnection @Inject constructor() : Interceptor, ConnectivityManager
         online = capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
     }
 }
+

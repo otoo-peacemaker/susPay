@@ -1,10 +1,12 @@
 package com.example.kotlin.di
 
-import com.example.kotlin.repository.NetworkConnection
+import android.content.Context
+import com.example.kotlin.webservices.NetworkConnection
 import com.example.kotlin.webservices.Endpoints
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -19,14 +21,14 @@ object BackendApiModule {
     //interceptor
     @Singleton
     @Provides
-    private fun interceptor(): HttpLoggingInterceptor = HttpLoggingInterceptor().apply {
+     fun interceptor(): HttpLoggingInterceptor = HttpLoggingInterceptor().apply {
         this.level = HttpLoggingInterceptor.Level.BODY
     }
 
     //okClient
     @Singleton
     @Provides
-    private fun client(): OkHttpClient = OkHttpClient.Builder().apply {
+    fun client(): OkHttpClient = OkHttpClient.Builder().apply {
         // this.addInterceptor(TokenInterceptor())
         this.addInterceptor(NetworkConnection())
         this.addInterceptor(interceptor())
@@ -45,4 +47,18 @@ object BackendApiModule {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
+
+    @Provides
+    @Singleton
+    fun provideContext(application: MainApplication): Context {
+        return application.applicationContext
+    }
+
+    @Singleton
+    @Provides
+    fun provideApplication(@ApplicationContext app: Context): MainApplication {
+        return app as MainApplication
+    }
+
+
 }
