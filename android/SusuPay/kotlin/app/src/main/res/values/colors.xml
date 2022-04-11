@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--App define colors-->
+    <color name="green">#19B832</color>
+    <color name="grey">#717E95</color>
+    <color name="orange">#FFB731</color>
+    <color name="btn_inactive">#DCE1EA</color>
+    <color name="btn_inactive_txt_color">#9AA0AC</color>
 </resources>

@@ -1,5 +1,7 @@
 package com.example.kotlin.webservices
 
+import androidx.fragment.app.Fragment
+import com.example.kotlin.ui.fragment.LoginFragment
 import retrofit2.HttpException
 import java.net.ConnectException
 import java.net.SocketTimeoutException
@@ -7,7 +9,7 @@ import java.net.UnknownHostException
 
 
 object NetworkCallExceptions {
-    fun resolveError(e: Exception): State.ErrorState {
+    fun Fragment.resolveError(e: Exception): State.ErrorState {
             var error = e
 
             when (e) {
@@ -29,6 +31,7 @@ object NetworkCallExceptions {
                     }
                     401 -> {
                         throw AuthenticationException("authentication error!")
+
                     }
                     400 -> {
                         error = NetworkErrorException.parseException(e)

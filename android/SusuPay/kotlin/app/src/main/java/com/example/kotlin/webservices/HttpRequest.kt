@@ -1,16 +1,6 @@
 package com.example.kotlin.webservices
 
-import android.util.Log
-import com.example.kotlin.dao.Auths
-import com.example.kotlin.dao.AuthsResponse
-import com.example.kotlin.repository.remote.AuthRepository
-import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
-import javax.inject.Inject
-import javax.inject.Singleton
-
-@Singleton
+/*@Singleton
 class HttpRequest @Inject constructor(private val networkCall: ApiInterface) : AuthRepository {
 
     override fun login(userBody: Auths): Observable<AuthsResponse> {
@@ -25,7 +15,7 @@ class HttpRequest @Inject constructor(private val networkCall: ApiInterface) : A
                 Log.i("LookUp", it.data.toString())
             }.observeOn(AndroidSchedulers.mainThread())
         }
-}
+}*/
 
 
 

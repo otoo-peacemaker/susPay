@@ -1,3 +1,4 @@
+/*
 package com.example.kotlin.di
 
 import android.content.Context
@@ -61,4 +62,4 @@ object BackendApiModule {
     }
 
 
-}
+}*/

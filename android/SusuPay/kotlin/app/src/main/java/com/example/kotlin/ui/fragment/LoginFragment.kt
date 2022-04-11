@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.kotlin.R
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+
 class LoginFragment : Fragment() {
 
     override fun onCreateView(

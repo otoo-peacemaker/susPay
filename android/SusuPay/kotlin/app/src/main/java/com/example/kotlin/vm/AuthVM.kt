@@ -3,12 +3,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.kotlin.dao.AuthsResponse
-import com.example.kotlin.repository.remote.AuthRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Job
 import javax.inject.Inject
 
+/*
 @HiltViewModel
 class AuthVM @Inject constructor(var authRepository: AuthRepository) : ViewModel() {
 
@@ -32,4 +32,4 @@ class AuthVM @Inject constructor(var authRepository: AuthRepository) : ViewModel
         super.onCleared()
         _responseLiveData.value = null
     }
-}
+}*/

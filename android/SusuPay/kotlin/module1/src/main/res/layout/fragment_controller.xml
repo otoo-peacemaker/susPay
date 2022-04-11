@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.ControllerFragment">
+    tools:context="com.example.architecturaltemplate.ui.activity.UIController">
 
     <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
@@ -13,5 +13,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/auth_screen_navigations" />
 </androidx.constraintlayout.widget.ConstraintLayout>
