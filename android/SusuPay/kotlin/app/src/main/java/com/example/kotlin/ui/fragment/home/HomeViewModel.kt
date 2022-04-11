@@ -1,4 +1,4 @@
-package com.example.kotlin.ui.activity.home
+package com.example.kotlin.ui.fragment.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,12 +1,4 @@
-package com.example.kotlin.vm
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.example.kotlin.dao.AuthsResponse
-import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CoroutineExceptionHandler
-import kotlinx.coroutines.Job
-import javax.inject.Inject
+package com.example.kotlin.ui.viewmodels
 
 /*
 @HiltViewModel

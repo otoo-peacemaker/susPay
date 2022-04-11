@@ -36,4 +36,8 @@
     <string name="active_balance">Active balance</string>
     <string name="deposit">Deposit</string>
     <string name="in_out"><![CDATA[in & out]]></string>
+    <string name="expenses">Expenses</string>
+    <string name="date_hyphen">-</string>
+    <string name="from">from</string>
+    <string name="to">to</string>
 </resources>

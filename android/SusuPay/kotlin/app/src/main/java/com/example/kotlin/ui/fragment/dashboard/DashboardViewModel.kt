@@ -1,4 +1,4 @@
-package com.example.kotlin.ui.activity.dashboard
+package com.example.kotlin.ui.fragment.dashboard
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

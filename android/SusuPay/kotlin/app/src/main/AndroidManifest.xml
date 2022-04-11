@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kotlin">
         <activity
-            android:name=".AppMainActivity"
+            android:name=".ui.activity.AppMainActivity"
             android:exported="false"
             android:label="@string/title_activity_app_main" />
         <activity

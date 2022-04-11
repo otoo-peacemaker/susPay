@@ -1,4 +1,4 @@
-package com.example.kotlin.ui.activity.notifications
+package com.example.kotlin.ui.fragment.notifications
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
