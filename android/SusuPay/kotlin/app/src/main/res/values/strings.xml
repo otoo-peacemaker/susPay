@@ -32,4 +32,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="amount_in_acc">Amount in acc</string>
+    <string name="active_balance">Active balance</string>
+    <string name="deposit">Deposit</string>
+    <string name="in_out"><![CDATA[in & out]]></string>
 </resources>

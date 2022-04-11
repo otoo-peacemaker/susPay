@@ -24,5 +24,7 @@
     <string name="reset">Reset</string>
     <string name="reset_password">Reset password</string>
     <string name="reset_note">Reset your password by entering new password</string>
+    <string name="active_balance">Active balance</string>
+    <string name="deposit">Deposit</string>
 
 </resources>
