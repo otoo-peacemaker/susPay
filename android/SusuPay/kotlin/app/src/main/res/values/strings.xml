@@ -40,4 +40,11 @@
     <string name="date_hyphen">-</string>
     <string name="from">from</string>
     <string name="to">to</string>
+    <string name="d">D</string>
+    <string name="type">type</string>
+    <string name="transaction_date">transaction date</string>
+    <string name="total_transaction">Total transaction</string>
+    <string name="percent_in_out">% in/out</string>
+    <string name="percent_deposit">% deposit</string>
+    <string name="percent_withdraw">% withdrawals</string>
 </resources>

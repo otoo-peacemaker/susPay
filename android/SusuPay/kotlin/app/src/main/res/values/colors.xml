@@ -14,4 +14,5 @@
     <color name="orange">#FFB731</color>
     <color name="btn_inactive">#DCE1EA</color>
     <color name="btn_inactive_txt_color">#9AA0AC</color>
+    <color name="accent4">#DD1444</color>
 </resources>

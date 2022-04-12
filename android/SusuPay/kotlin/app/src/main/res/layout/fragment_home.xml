@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -38,6 +37,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/amount_in_acc"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/_13ssp"
                     android:textStyle="bold" />
 
@@ -45,6 +45,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/active_balance"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/_13ssp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -106,6 +107,7 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_5sdp"
                     android:text="@string/deposit"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/_12ssp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -131,6 +133,7 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_5sdp"
                     android:text="@string/deposit"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/_12ssp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -156,6 +159,7 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_5sdp"
                     android:text="@string/in_out"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/_12ssp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -172,16 +176,19 @@
         android:layout_marginStart="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_15sdp"
-        app:cardCornerRadius="@dimen/_10sdp"
         android:elevation="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/footer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header">
+
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_margin="@dimen/_10sdp"
-            android:padding="@dimen/_10sdp">
+            android:padding="@dimen/_5sdp">
 
             <TextView
                 android:id="@+id/expenses"
@@ -189,6 +196,7 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_5sdp"
                 android:text="@string/expenses"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/to"
@@ -203,6 +211,7 @@
                 android:gravity="start"
                 android:padding="@dimen/_5sdp"
                 android:text="@string/from"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_12ssp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="parent"
@@ -212,8 +221,6 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
                 android:padding="@dimen/_5sdp"
                 android:text="@string/date_hyphen"
                 android:textStyle="bold"
@@ -227,28 +234,90 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_5sdp"
                 android:text="@string/to"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_12ssp"
                 android:textStyle="normal"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.434"
                 app:layout_constraintStart_toEndOf="@+id/textView"
                 app:layout_constraintTop_toBottomOf="@+id/expenses" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/from">
+
+                <TextView
+                    android:id="@+id/percentage_transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/percentage_transaction"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/percent_in_out"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/percentage_deposit"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/percentage_deposits"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/percent_deposit"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/percentage_withdraw"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/percentage_withdrawals"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/percent_withdraw"
+                    android:textColor="@color/white" />
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <!--Footer-->
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_15sdp"
         android:layout_marginEnd="@dimen/_15sdp"
-        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:elevation="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/body">
-    </LinearLayout>
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

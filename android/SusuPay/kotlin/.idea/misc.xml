@@ -4,10 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1015" />
+        <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/drawable/percentage_deposits.xml" value="0.1215" />
+        <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/drawable/percentage_transaction.xml" value="0.1215" />
+        <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/drawable/percentage_withdrawals.xml" value="0.1215" />
         <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/layout/activity_app_main.xml" value="0.21036036036036035" />
         <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/layout/fragment_confirm_number.xml" value="0.22567567567567567" />
-        <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/layout/fragment_landing.xml" value="0.2" />
         <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/layout/fragment_login.xml" value="0.2" />
         <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/layout/fragment_registration.xml" value="0.2" />
@@ -15,6 +18,7 @@
         <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/layout/fragment_splash.xml" value="0.2609375" />
         <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/layout/fragment_u_i_controller.xml" value="0.2609375" />
         <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/layout/fragment_verification.xml" value="0.21351351351351353" />
+        <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/layout/transaction_list.xml" value="0.4" />
         <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/app/src/main/res/menu/bottom_nav_menu.xml" value="0.22252252252252253" />
         <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/module1/src/main/res/drawable-v24/ic_broken_image.xml" value="0.1" />
         <entry key="..\:/Users/PeacemakerNanaKwesiO/Desktop/payment system/susPay/android/SusuPay/kotlin/module1/src/main/res/layout/activity_main.xml" value="0.20185185185185187" />
