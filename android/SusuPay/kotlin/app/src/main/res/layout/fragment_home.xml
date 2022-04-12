@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -241,7 +242,17 @@
                 app:layout_constraintStart_toEndOf="@+id/textView"
                 app:layout_constraintTop_toBottomOf="@+id/expenses" />
 
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/chart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                app:layout_constraintTop_toTopOf="@+id/expenses" />
+
             <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
@@ -265,8 +276,8 @@
                 <TextView
                     android:id="@+id/percentage_deposit"
                     android:layout_width="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
                     android:background="@drawable/percentage_deposits"
                     android:padding="@dimen/_5sdp"
                     android:text="@string/percent_deposit"
@@ -275,8 +286,8 @@
                 <TextView
                     android:id="@+id/percentage_withdraw"
                     android:layout_width="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
                     android:background="@drawable/percentage_withdrawals"
                     android:padding="@dimen/_5sdp"
                     android:text="@string/percent_withdraw"
@@ -307,10 +318,13 @@
             android:padding="@dimen/_10sdp">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:focusable="true"
+                tools:itemCount="3"
+                tools:listitem="@layout/transaction_list"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

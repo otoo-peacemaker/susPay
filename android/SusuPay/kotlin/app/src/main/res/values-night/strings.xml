@@ -37,5 +37,8 @@
     <string name="percent_in_out">% in/out</string>
     <string name="percent_deposit">% deposit</string>
     <string name="percent_withdraw">% withdrawals</string>
+    <string name="Transaction">Transaction</string>
+    <string name="ghc_240000">Ghc 240000</string>
+    <string name="filter_date">Filter date</string>
 
 </resources>

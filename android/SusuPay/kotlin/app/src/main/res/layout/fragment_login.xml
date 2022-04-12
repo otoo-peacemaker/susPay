@@ -78,6 +78,7 @@
                 android:layout_height="wrap_content"
                 app:helperTextEnabled="true"
                 app:errorEnabled="true"
+                app:passwordToggleEnabled="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -87,6 +88,7 @@
                     android:id="@+id/loginPassword"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_10sdp"
                     android:hint="@string/password"
                     android:textSize="@dimen/_12ssp" />
 
@@ -98,7 +100,9 @@
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:clickable="true"
                 android:focusable="true"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:text="@string/forgot_password"
+                android:layout_marginTop="@dimen/_50sdp"
                 android:textColor="@color/orange"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
