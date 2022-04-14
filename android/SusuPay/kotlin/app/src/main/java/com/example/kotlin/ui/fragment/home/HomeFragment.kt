@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlin.adapters.TransactionAdapter
 import com.example.kotlin.dao.TransactionDetails
+import com.example.kotlin.dao.TransactionType
 import com.example.kotlin.databinding.FragmentHomeBinding
 import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.data.PieData
@@ -47,10 +48,9 @@ class HomeFragment : Fragment() {
         for (i in 1..4){
             transData.add(
                 TransactionDetails(
-                "Deposit",
+                TransactionType("Deposit").toString(),
                 "12-09-21",
                 233456.00,
-                "D"
             )
             )
         }
@@ -58,10 +58,9 @@ class HomeFragment : Fragment() {
         for (i in 1..2){
             transData.add(
                 TransactionDetails(
-                "Withdraw",
+                TransactionType("Withdraw").toString(),
                 "12-09-21",
                 2456.00,
-                "W"
             )
             )
         }
