@@ -19,6 +19,8 @@ import android.util.Patterns
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.lifecycle.Lifecycle
+import kotlinx.coroutines.Job
 import org.json.JSONObject
 import java.io.File
 import java.net.URI
@@ -55,19 +57,6 @@ object UtilityMethods {
      * @param bytesIn number of bytes downloaded
      * @return SpeedInfo containing current speed
      */
-    fun calculate(downloadTime: Long, bytesIn: Long): SpeedInfo {
-        //  double EDGE_THRESHOLD = 176.0;
-        val BYTE_TO_KILOBIT = 0.0078125
-        val KILOBIT_TO_MEGABIT = 0.0009765625
-        val info = SpeedInfo()
-        val bytespersecond = bytesIn * 1000 / downloadTime.toDouble()
-        val kilobits = bytespersecond * BYTE_TO_KILOBIT
-        megabits = kilobits * KILOBIT_TO_MEGABIT
-        info.downspeed = bytespersecond
-        info.kilobits = kilobits
-        info.megabits = megabits
-        return info
-    }
 
     var megabits = 0.0
     fun setTokenValue(token: String) {
@@ -79,23 +68,6 @@ object UtilityMethods {
             Constants.PreferenceConstants.TOKEN,
             tokenVal
         )
-    }
-
-    @SuppressLint("SimpleDateFormat")
-    fun parseDateTimeTohmma(time: String?): String? {
-        val inputPattern = "yyyy-MM-dd hh:mm:ss"
-        val outputPattern = "h:mm a"
-        val inputFormat = SimpleDateFormat(inputPattern)
-        val outputFormat = SimpleDateFormat(outputPattern)
-        var date: Date? = null
-        var str: String? = null
-        try {
-            date = inputFormat.parse(time)
-            str = outputFormat.format(date)
-        } catch (e: ParseException) {
-            e.printStackTrace()
-        }
-        return str
     }
 
     @SuppressLint("SimpleDateFormat")
@@ -220,53 +192,6 @@ object UtilityMethods {
         get() = Date().time.toString()
 
 
-    @Throws(GeneralSecurityException::class)
-    fun loadPrivateKey(key64: String?): PrivateKey {
-        val clear = Base64.decode(key64, Base64.DEFAULT)
-        val keySpec =
-            PKCS8EncodedKeySpec(clear)
-        val fact = KeyFactory.getInstance("RSA")
-        val priv = fact.generatePrivate(keySpec)
-        Arrays.fill(clear, 0.toByte())
-        return priv
-    }
-
-    @Throws(GeneralSecurityException::class)
-    fun loadPublicKey(stored: String?): PublicKey {
-        val authData = Base64.decode(stored, Base64.DEFAULT)
-        val spec =
-            X509EncodedKeySpec(authData)
-        val fact = KeyFactory.getInstance("RSA")
-        return fact.generatePublic(spec)
-    }
-
-    @Throws(GeneralSecurityException::class)
-    fun savePrivateKey(priv: PrivateKey?): String {
-        val fact = KeyFactory.getInstance("RSA")
-        val spec =
-            fact.getKeySpec(
-                priv,
-                PKCS8EncodedKeySpec::class.java
-            )
-        val packed = spec.encoded
-        val key64 =
-            String(Base64.encode(packed, Base64.DEFAULT))
-        Arrays.fill(packed, 0.toByte())
-        return key64
-    }
-
-    @Throws(GeneralSecurityException::class)
-    fun savePublicKey(publ: PublicKey?): String {
-        val fact = KeyFactory.getInstance("RSA")
-        val spec =
-            fact.getKeySpec(
-                publ,
-                X509EncodedKeySpec::class.java
-            )
-        return String(Base64.encode(spec.encoded, Base64.DEFAULT))
-    }
-
-
     @JvmStatic
     fun encrypt(input: String?): String {
         var crypted: ByteArray? = null
@@ -317,23 +242,6 @@ object UtilityMethods {
         val year: Int = c.get(Calendar.YEAR)
         return "$day-$month-$year"
     }
-    fun formatDateFromstring(
-        inputFormat: String?,
-        outputFormat: String?,
-        inputDate: String?
-    ): String {
-        var parsed: Date? = null
-        var outputDate = ""
-        val df_input = SimpleDateFormat(inputFormat, Locale.getDefault())
-        val df_output = SimpleDateFormat(outputFormat, Locale.getDefault())
-        try {
-            parsed = inputDate?.let { df_input.parse(it) }
-            outputDate = parsed?.let { df_output.format(it) }.toString()
-        } catch (e: ParseException) {
-            Log.e("", "ParseException - dateFormat")
-        }
-        return outputDate
-    }
 
     fun isNetworkAvailable(context: Context): Boolean {
         val conMan = context
@@ -378,63 +286,4 @@ object UtilityMethods {
         }
     }
 
-    fun isLocationEnabled(context: Context): Boolean {
-        var locationMode = 0
-        val locationProviders: String
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            try {
-                locationMode = Settings.Secure.getInt(
-                    context.contentResolver,
-                    Settings.Secure.LOCATION_MODE
-                )
-            } catch (e: SettingNotFoundException) {
-                e.printStackTrace()
-            }
-            locationMode != Settings.Secure.LOCATION_MODE_OFF
-        } else {
-            locationProviders = Settings.Secure.getString(
-                context.contentResolver,
-                Settings.Secure.LOCATION_PROVIDERS_ALLOWED
-            )
-            !TextUtils.isEmpty(locationProviders)
-        }
-    }
-
-    fun myTimeConverter(unix: String): String {
-        val sdf: DateFormat =
-            SimpleDateFormat("dd MMM, yyyy' 'HH:mm:ss", Locale.getDefault())
-        sdf.timeZone = TimeZone.getTimeZone("Asia/Calcutta")
-        val calendar = Calendar.getInstance()
-        calendar.timeInMillis = unix.toLong()
-        val tz = TimeZone.getDefault()
-        sdf.timeZone = tz
-        return sdf.format(calendar.time)
-    }
-
-    fun showLoadingDialog(context: Context?, msg: String?) {
-        if (pd == null) {
-            pd = ProgressDialog(context)
-            pd!!.setMessage(msg)
-            pd!!.show()
-            pd!!.setCancelable(false)
-            pd!!.setCanceledOnTouchOutside(false)
-        }
-    }
-
-    fun dismissLoadingDialog() {
-        if (pd != null) {
-            pd!!.dismiss()
-            pd = null
-        }
-    }
-
-    /**
-     * Transfer Object
-     * @author devil
-     */
-    class SpeedInfo {
-        var kilobits = 0.0
-        var megabits = 0.0
-        var downspeed = 0.0
-    }
 }

@@ -2,19 +2,18 @@ package com.example.kotlin.di.module
 
 
 import androidx.databinding.library.BuildConfig
+import com.example.kotlin.di.Scope
 import com.example.kotlin.repository.remote.RemoteDataSource
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import javax.inject.Singleton
 
 @Module
-class NetworkModule {
-
+class AndroidModule {
     /**
      * @author Peacemaker Otoo
-     * We create a class called NetworkModule.java and annotate it with @Module to signal to
+     * We create a class called AndroidModule.java and annotate it with @Module to signal to
      * Dagger to search within the available methods for possible instance providers.
      * The methods that will actually expose available return types
      * should also be annotated with the @Provides annotation.
@@ -23,12 +22,12 @@ class NetworkModule {
      * that can be used as part of the dependency list.
      * */
 
+    @Scope
     @Provides
-    @Singleton
     fun provideRemoteDataSource(): RemoteDataSource = RemoteDataSource()
 
+    @Scope
     @Provides
-    @Singleton
     fun provideHttpLogging(): OkHttpClient {
         return OkHttpClient.Builder().also { client ->
             if (BuildConfig.DEBUG) {

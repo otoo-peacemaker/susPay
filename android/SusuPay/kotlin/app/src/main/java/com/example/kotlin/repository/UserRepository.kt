@@ -1,8 +1,11 @@
 package com.example.kotlin.repository
 
+import com.example.kotlin.di.Scope
 import com.example.kotlin.network.HttpRequest
+import javax.inject.Inject
 
-class UserRepository(private val api: HttpRequest) : BaseRepository() {
+@Scope
+class UserRepository @Inject constructor(private val api: HttpRequest) : BaseRepository() {
     suspend fun login(body: HashMap<String, String>) = safeApiCall {
         api.login(body)
     }

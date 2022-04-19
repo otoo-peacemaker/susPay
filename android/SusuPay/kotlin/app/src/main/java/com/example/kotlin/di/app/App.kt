@@ -1,10 +1,13 @@
 package com.example.kotlin.di.app
 
+import android.app.Activity
 import android.app.Application
 import android.content.Context
-import com.example.kotlin.di.module.NetworkModule
 import com.example.kotlin.BuildConfig
 import com.example.kotlin.di.component.AppComponent
+import com.example.kotlin.di.module.ActivityModule
+import com.example.kotlin.di.module.AndroidModule
+import com.example.kotlin.di.module.ApplicationModule
 
 class App : Application() {
     init {
@@ -22,14 +25,16 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        createComponent()
+      createComponent()
     }
 
 
     private fun createComponent() {
-        component = DaggerAppComponent.builder()
+        component = DaggerAppComponent.build()
             .applicationModule(ApplicationModule(this))
-            .androidModule(NetworkModule()).build()
+            .androidModule(AndroidModule())
+            .activityModule(ActivityModule(activity = Activity()))
+            .build()
     }
 
     private fun initializeLeakDetection(){
