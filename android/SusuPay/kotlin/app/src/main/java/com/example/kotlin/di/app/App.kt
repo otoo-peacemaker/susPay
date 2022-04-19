@@ -5,6 +5,7 @@ import android.app.Application
 import android.content.Context
 import com.example.kotlin.BuildConfig
 import com.example.kotlin.di.component.AppComponent
+import com.example.kotlin.di.component.DaggerAppComponent
 import com.example.kotlin.di.module.ActivityModule
 import com.example.kotlin.di.module.AndroidModule
 import com.example.kotlin.di.module.ApplicationModule
@@ -30,7 +31,7 @@ class App : Application() {
 
 
     private fun createComponent() {
-        component = DaggerAppComponent.build()
+        component = DaggerAppComponent.builder()
             .applicationModule(ApplicationModule(this))
             .androidModule(AndroidModule())
             .activityModule(ActivityModule(activity = Activity()))

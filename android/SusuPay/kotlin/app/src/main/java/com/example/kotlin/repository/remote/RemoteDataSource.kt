@@ -15,7 +15,6 @@ class RemoteDataSource {
     fun <Api> buildApi(api: Class<Api>): Api {
         (App.instance as App).component
             .inject(this)
-        // return this.remoteDataSource2
         return Retrofit.Builder()
             .baseUrl(Constants.baseUrl)
             .client(ok)

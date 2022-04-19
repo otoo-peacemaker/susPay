@@ -17,13 +17,12 @@ import dagger.Component
     modules = [
         ApplicationModule::class,
         AndroidModule::class,
-        ActivityModule::class,
-        HttpRequest::class]
+        ActivityModule::class]
 )
 interface AppComponent {
     fun inject(fragment: MainActivity)
 
-    fun userRepository(): UserRepository
+ //   fun userRepository(): UserRepository
 
     fun inject(fragment: LoginFragment)
     fun inject(fragment: RegistrationFragment)
