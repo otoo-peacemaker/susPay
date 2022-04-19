@@ -28,7 +28,6 @@ class SplashFragment : Fragment() {
 
 
         Handler(Looper.getMainLooper()).postDelayed({
-            // hideSystemBars()
             findNavController().navigate(R.id.action_splashFragment_to_landingFragment)
         }, 3000)
     }
