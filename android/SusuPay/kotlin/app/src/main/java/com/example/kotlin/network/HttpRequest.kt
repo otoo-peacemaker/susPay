@@ -1,4 +1,4 @@
-package com.example.kotlin.webservices
+package com.example.kotlin.network
 
 /*@Singleton
 class HttpRequest @Inject constructor(private val networkCall: ApiInterface) : AuthRepository {

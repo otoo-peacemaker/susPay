@@ -1,4 +1,4 @@
-package com.example.kotlin.webservices
+package com.example.kotlin.network
 
 import android.annotation.SuppressLint
 import android.net.ConnectivityManager

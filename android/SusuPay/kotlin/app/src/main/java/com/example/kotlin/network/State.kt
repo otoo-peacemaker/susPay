@@ -1,4 +1,4 @@
-package com.example.kotlin.webservices
+package com.example.kotlin.network
 
 sealed class State<out T> {
     object LoadingState : State<Nothing>()

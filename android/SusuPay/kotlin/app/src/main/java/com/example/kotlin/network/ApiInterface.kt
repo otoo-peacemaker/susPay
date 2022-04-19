@@ -1,10 +1,8 @@
-package com.example.kotlin.webservices
+package com.example.kotlin.network
 
 import com.example.kotlin.dao.Auths
 import com.example.kotlin.dao.AuthsResponse
 import io.reactivex.Observable
-import okhttp3.Call
-import okhttp3.MultipartBody
 import retrofit2.http.*
 
 interface ApiInterface {

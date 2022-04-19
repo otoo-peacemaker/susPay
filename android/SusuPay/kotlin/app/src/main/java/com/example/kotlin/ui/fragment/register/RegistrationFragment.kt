@@ -1,4 +1,4 @@
-package com.example.kotlin.ui.fragment
+package com.example.kotlin.ui.fragment.register
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

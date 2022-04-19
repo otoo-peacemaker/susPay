@@ -1,7 +1,6 @@
-package com.example.kotlin.webservices
+package com.example.kotlin.network
 
 import androidx.fragment.app.Fragment
-import com.example.kotlin.ui.fragment.LoginFragment
 import retrofit2.HttpException
 import java.net.ConnectException
 import java.net.SocketTimeoutException

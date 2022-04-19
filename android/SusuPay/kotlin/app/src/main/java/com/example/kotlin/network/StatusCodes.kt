@@ -1,4 +1,4 @@
-package com.example.kotlin.webservices
+package com.example.kotlin.network
 
 object StatusCodes {
         const val success = 200
