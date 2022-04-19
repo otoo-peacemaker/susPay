@@ -3,20 +3,22 @@ package com.example.kotlin.adapters
 import android.view.View
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
-import com.google.android.gms.fido.fido2.api.common.RequestOptions
+import com.example.kotlin.R
+import com.example.kotlin.network.Resource
+import retrofit2.Response
 
 @BindingAdapter("Status")
-fun bindStatus(statusImageView: ImageView, status: Status?) {
+fun bindStatus(statusImageView: ImageView, status: Resource<String>?) {
     when (status) {
-        Status.LOADING -> {
+        Resource.Loading -> {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.loading_animation)
         }
-        Status.ERROR -> {
+        Resource.Failures(isNetworkError = true) -> {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.ic_connection_error)
         }
-        Status.SUCCESS -> {
+        Resource.Success(Response.success("success").message())-> {
             statusImageView.visibility = View.GONE
         }
         else -> {

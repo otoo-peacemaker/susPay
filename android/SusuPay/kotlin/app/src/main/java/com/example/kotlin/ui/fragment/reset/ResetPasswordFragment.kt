@@ -1,4 +1,4 @@
-package com.example.kotlin.ui.fragment
+package com.example.kotlin.ui.fragment.reset
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
