@@ -2,7 +2,9 @@ package com.example.kotlin.di.app
 
 import android.app.Application
 import android.content.Context
+import com.example.kotlin.di.module.NetworkModule
 import com.example.kotlin.BuildConfig
+import com.example.kotlin.di.component.AppComponent
 
 class App : Application() {
     init {
@@ -23,10 +25,11 @@ class App : Application() {
         createComponent()
     }
 
+
     private fun createComponent() {
         component = DaggerAppComponent.builder()
             .applicationModule(ApplicationModule(this))
-            .androidModule(AndroidModule()).build()
+            .androidModule(NetworkModule()).build()
     }
 
     private fun initializeLeakDetection(){

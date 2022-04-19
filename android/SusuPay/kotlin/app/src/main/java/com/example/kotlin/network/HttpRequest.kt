@@ -1,21 +1,17 @@
 package com.example.kotlin.network
 
-/*@Singleton
-class HttpRequest @Inject constructor(private val networkCall: ApiInterface) : AuthRepository {
-
-    override fun login(userBody: Auths): Observable<AuthsResponse> {
-        return networkCall.loginUser(userBody).subscribeOn(Schedulers.io())
-            .doOnNext {
-                Log.i("login", it.data.toString()) }
-            .observeOn(AndroidSchedulers.mainThread())
-        }
-
-        override fun lookUp(userBody: Auths): Observable<AuthsResponse> {
-            return networkCall.registerUser(userBody).subscribeOn(Schedulers.io()).doOnNext {
-                Log.i("LookUp", it.data.toString())
-            }.observeOn(AndroidSchedulers.mainThread())
-        }
-}*/
+import com.example.kotlin.dao.LoginResponse
+import com.example.kotlin.dao.RegisterResponse
+import com.example.kotlin.util.Constants
+import retrofit2.http.Body
+import retrofit2.http.POST
 
 
+interface HttpRequest {
+    @POST(Constants.Url.login)
+    suspend fun login(@Body body: HashMap<String, String>): LoginResponse
 
+    @POST(Constants.Url.register)
+    suspend fun register(@Body body: HashMap<String, String>): RegisterResponse
+
+}

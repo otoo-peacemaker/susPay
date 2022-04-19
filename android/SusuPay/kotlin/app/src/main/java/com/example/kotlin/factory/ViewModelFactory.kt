@@ -3,7 +3,7 @@ package com.example.kotlin.factory
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.kotlin.repository.BaseRepository
-import com.example.kotlin.repository.AuthsRepository
+import com.example.kotlin.repository.UserRepository
 import com.example.kotlin.ui.fragment.login.LoginViewModel
 
 @Suppress("UNCHECKED_CAST")
@@ -15,7 +15,7 @@ class ViewModelFactory(private val repository: BaseRepository) :
         return when {
 
             modelClass.isAssignableFrom(LoginViewModel::class.java) -> LoginViewModel(
-                repository as AuthsRepository
+                repository as UserRepository
             ) as T
 
             /*modelClass.isAssignableFrom(NotificationsViewModel::class.java) -> NotificationsViewModel(
