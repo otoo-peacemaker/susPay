@@ -13,7 +13,6 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.kotlin.ui.fragment.login.LoginFragment"
-        android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_appMainActivity"
@@ -28,7 +27,6 @@
     <fragment
         android:id="@+id/landingFragment"
         android:name="com.example.kotlin.ui.fragment.LandingFragment"
-        android:label="fragment_landing"
         tools:layout="@layout/fragment_landing" >
         <action
             android:id="@+id/action_landingFragment_to_loginFragment"
@@ -40,7 +38,6 @@
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.kotlin.ui.fragment.SplashFragment"
-        android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_landingFragment"
@@ -48,8 +45,8 @@
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.example.kotlin.ui.fragment.RegistrationFragment"
-        android:label="fragment_registration"
+        android:name="com.example.kotlin.ui.fragment.register.RegistrationFragment"
+        android:label="Login"
         tools:layout="@layout/fragment_registration" >
         <action
             android:id="@+id/action_registrationFragment_to_loginFragment"
@@ -65,7 +62,7 @@
         android:label="AppMainActivity" />
     <fragment
         android:id="@+id/confirmNumberFragment"
-        android:name="com.example.kotlin.ui.fragment.ConfirmNumberFragment"
+        android:name="com.example.kotlin.ui.fragment.confirm.ConfirmNumberFragment"
         android:label="fragment_confirm_number"
         tools:layout="@layout/fragment_confirm_number" >
         <action
@@ -74,7 +71,7 @@
     </fragment>
     <fragment
         android:id="@+id/resetPasswordFragment"
-        android:name="com.example.kotlin.ui.fragment.ResetPasswordFragment"
+        android:name="com.example.kotlin.ui.fragment.reset.ResetPasswordFragment"
         android:label="fragment_reset_password"
         tools:layout="@layout/fragment_reset_password" >
         <action
@@ -83,7 +80,7 @@
     </fragment>
     <fragment
         android:id="@+id/verificationFragment"
-        android:name="com.example.kotlin.ui.fragment.VerificationFragment"
+        android:name="com.example.kotlin.ui.fragment.verification.VerificationFragment"
         android:label="fragment_verification"
         tools:layout="@layout/fragment_verification" >
         <action

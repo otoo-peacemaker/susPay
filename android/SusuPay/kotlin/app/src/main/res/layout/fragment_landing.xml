@@ -62,12 +62,10 @@
 
         <Button
             android:id="@+id/loginBtn"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_5sdp"
             android:text="@string/log_in"
-
             android:textAllCaps="false"
             tools:ignore="ButtonStyle" />
 
@@ -88,6 +86,7 @@
         android:layout_width="@dimen/_80sdp"
         android:layout_height="@dimen/_80sdp"
         android:src="@drawable/loading_animation"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

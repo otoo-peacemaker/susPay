@@ -8,6 +8,7 @@ import com.example.kotlin.network.HttpRequest
 import com.example.kotlin.repository.UserRepository
 import com.example.kotlin.repository.remote.RemoteDataSource
 import com.example.kotlin.ui.activity.MainActivity
+import com.example.kotlin.ui.fragment.LandingFragment
 import com.example.kotlin.ui.fragment.login.LoginFragment
 import com.example.kotlin.ui.fragment.register.RegistrationFragment
 import dagger.Component
@@ -25,6 +26,7 @@ interface AppComponent {
  //   fun userRepository(): UserRepository
 
     fun inject(fragment: LoginFragment)
+    fun inject(fragment: LandingFragment)
     fun inject(fragment: RegistrationFragment)
     fun inject(fragment: RemoteDataSource)
 

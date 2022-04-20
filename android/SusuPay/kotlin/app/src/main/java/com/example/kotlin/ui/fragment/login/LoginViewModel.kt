@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class LoginViewModel @Inject constructor(
-    val userRepository: UserRepository
+    private val userRepository: UserRepository
 ) : ViewModel() {
     /**
      * The internal MutableLiveData that stores the status of the most recent request
