@@ -39,9 +39,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
             android:layout_margin="@dimen/_1sdp"
             android:text="@string/start_managing_your_life_finance"
-            android:textColor="@color/grey" />
+            android:textColor="@color/md_theme_light_secondary" />
 
 
     </LinearLayout>
@@ -61,10 +62,12 @@
 
         <Button
             android:id="@+id/loginBtn"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_5sdp"
             android:text="@string/log_in"
+
             android:textAllCaps="false"
             tools:ignore="ButtonStyle" />
 
@@ -76,7 +79,7 @@
             android:layout_margin="@dimen/_5sdp"
             android:text="@string/register"
             android:textAllCaps="false"
-            android:textColor="@color/btn_inactive_txt_color" />
+            android:textColor="@color/md_theme_light_secondary" />
 
     </LinearLayout>
 

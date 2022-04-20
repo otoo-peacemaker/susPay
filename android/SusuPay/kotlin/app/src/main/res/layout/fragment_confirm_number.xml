@@ -34,7 +34,7 @@
                 android:drawablePadding="@dimen/_20sdp"
                 android:focusable="true"
                 android:text="@string/log_in"
-                android:textColor="@color/orange"
+                android:textColor="@color/md_theme_light_secondary"
                 android:textSize="@dimen/_12ssp"
                 app:drawableStartCompat="@drawable/ic_baseline_arrow_back_24" />
 
@@ -54,6 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_30sdp"
+            android:textColor="@color/md_theme_light_secondary"
             android:gravity="center"
             android:text="@string/verification"
             android:textSize="@dimen/_14ssp" />

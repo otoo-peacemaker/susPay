@@ -35,7 +35,7 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:text="@string/Transaction"
-                android:textColor="@color/orange"
+                android:textColor="@color/md_theme_light_secondary"
                 android:textSize="@dimen/_12ssp"
                 app:drawableStartCompat="@drawable/ic_baseline_arrow_back_24" />
 
@@ -56,6 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_30sdp"
             android:gravity="center"
+            android:textColor="@color/md_theme_light_secondary"
             android:text="@string/active_balance"
             android:textSize="@dimen/_14ssp" />
 
@@ -65,8 +66,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:gravity="center"
-            android:text="@string/ghc_240000"
-            android:textColor="@color/black" />
+            android:textStyle="bold"
+            android:text="@string/ghc_240000" />
     </LinearLayout>
 
     <TextView
@@ -76,8 +77,8 @@
         android:layout_marginTop="17dp"
         android:clickable="true"
         android:focusable="true"
+        android:textStyle="bold"
         android:text="@string/filter_date"
-        android:textColor="@color/btn_inactive_txt_color"
         app:layout_constraintBottom_toTopOf="@+id/footer"
         app:layout_constraintStart_toStartOf="@+id/footer"
         app:layout_constraintTop_toBottomOf="@+id/header" />

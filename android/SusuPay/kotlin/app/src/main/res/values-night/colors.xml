@@ -1,9 +1,9 @@
-<resources>
-    <color name="md_theme_light_primary">#006F01</color>
+<resources >
+    <color name="md_theme_light_primary">#19B832</color>
     <color name="md_theme_light_onPrimary">#FFFFFF</color>
     <color name="md_theme_light_primaryContainer">#70FF66</color>
     <color name="md_theme_light_onPrimaryContainer">#002200</color>
-    <color name="md_theme_light_secondary">#5B6400</color>
+    <color name="md_theme_light_secondary">#FFB731</color>
     <color name="md_theme_light_onSecondary">#FFFFFF</color>
     <color name="md_theme_light_secondaryContainer">#DEEE00</color>
     <color name="md_theme_light_onSecondaryContainer">#1A1E00</color>

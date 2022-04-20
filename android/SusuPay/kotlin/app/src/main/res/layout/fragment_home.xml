@@ -13,7 +13,7 @@
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/green"
+        android:background="@color/md_theme_light_primary"
         android:orientation="vertical"
         android:paddingStart="@dimen/_15sdp"
         android:paddingTop="50sp"
@@ -39,7 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/amount_in_acc"
-                    android:textColor="@color/black"
+                    android:textColor="@color/md_theme_dark_onPrimary"
                     android:textSize="@dimen/_13ssp"
                     android:textStyle="bold" />
 
@@ -47,7 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/active_balance"
-                    android:textColor="@color/black"
+                    android:textColor="@color/md_theme_dark_onPrimary"
                     android:textSize="@dimen/_13ssp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -64,7 +64,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_10sdp"
-                    android:backgroundTint="@color/green"
+                    android:backgroundTint="@color/md_theme_light_primaryContainer"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/ic_notifications_black_24dp" />
 
@@ -72,7 +72,7 @@
                     android:id="@+id/profile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/green"
+                    android:backgroundTint="@color/md_theme_light_onPrimaryContainer"
                     android:contentDescription="@string/app_name"
                     android:scaleType="fitXY"
                     android:src="@drawable/person_outline_24" />
@@ -109,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_5sdp"
                     android:text="@string/deposit"
-                    android:textColor="@color/white"
+                    android:textColor="@color/md_theme_light_onPrimary"
                     android:textSize="@dimen/_12ssp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -135,7 +135,7 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_5sdp"
                     android:text="@string/deposit"
-                    android:textColor="@color/white"
+                    android:textColor="@color/md_theme_light_onPrimary"
                     android:textSize="@dimen/_12ssp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -161,7 +161,7 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_5sdp"
                     android:text="@string/in_out"
-                    android:textColor="@color/white"
+                    android:textColor="@color/md_theme_light_onPrimary"
                     android:textSize="@dimen/_12ssp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -197,7 +197,7 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_5sdp"
                 android:text="@string/expenses"
-                android:textColor="@color/black"
+                android:textColor="@color/md_theme_light_onBackground"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/to"
@@ -212,7 +212,7 @@
                 android:gravity="start"
                 android:padding="@dimen/_5sdp"
                 android:text="@string/from"
-                android:textColor="@color/black"
+                android:textColor="@color/md_theme_light_onBackground"
                 android:textSize="@dimen/_12ssp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="parent"
@@ -235,7 +235,7 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_5sdp"
                 android:text="@string/to"
-                android:textColor="@color/black"
+               android:textColor="@color/md_theme_light_onBackground"
                 android:textSize="@dimen/_12ssp"
                 android:textStyle="normal"
                 app:layout_constraintHorizontal_bias="0.434"
@@ -270,8 +270,9 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/percentage_transaction"
                     android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12ssp"
                     android:text="@string/percent_in_out"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/md_theme_light_onSecondary" />
 
                 <TextView
                     android:id="@+id/percentage_deposit"
@@ -281,17 +282,19 @@
                     android:background="@drawable/percentage_deposits"
                     android:padding="@dimen/_5sdp"
                     android:text="@string/percent_deposit"
-                    android:textColor="@color/white" />
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/md_theme_light_onPrimary" />
 
                 <TextView
                     android:id="@+id/percentage_withdraw"
                     android:layout_width="wrap_content"
+                    android:textSize="@dimen/_12ssp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:background="@drawable/percentage_withdrawals"
                     android:padding="@dimen/_5sdp"
                     android:text="@string/percent_withdraw"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/md_theme_light_onError" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

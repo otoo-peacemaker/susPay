@@ -103,8 +103,9 @@
                     android:layout_marginBottom="@dimen/_10sdp"
                     android:clickable="true"
                     android:focusable="true"
+                    android:textSize="@dimen/_12ssp"
                     android:text="@string/forgot_password"
-                    android:textColor="@color/orange"
+                    android:textColor="@color/md_theme_light_secondary"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
                     app:layout_constraintHorizontal_bias="0.1"
@@ -160,8 +161,9 @@
                 android:layout_marginStart="@dimen/_5sdp"
                 android:clickable="true"
                 android:focusable="true"
+                android:textSize="@dimen/_12ssp"
                 android:text="@string/register"
-                android:textColor="@color/orange" />
+                android:textColor="@color/md_theme_light_secondary" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
