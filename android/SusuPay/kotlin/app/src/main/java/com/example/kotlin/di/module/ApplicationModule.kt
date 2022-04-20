@@ -25,22 +25,4 @@ class ApplicationModule(private val application: Application) {
     fun provideInputMethod() =
         application.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
 
-    /*  @Provides @Singleton ThreadExecutor provideThreadExecutor(JobExecutor jobExecutor) {
-     return jobExecutor;
-   }
-
-   @Provides @Singleton PostExecutionThread providePostExecutionThread(UIThread uiThread) {
-     return uiThread;
-   }
-
-     @Provides
-     @Singleton
-     UserCache provideUserCache(UserCacheImpl userCache) {
-     return userCache;
-   }
-
-   @Provides @Singleton UserRepository provideUserRepository(UserDataRepository userDataRepository) {
-     return userDataRepository;
-   }*/
-
 }
