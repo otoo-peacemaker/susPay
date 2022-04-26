@@ -1,5 +1,6 @@
 package com.example.kotlin.repository
 
+import com.example.kotlin.network.BaseApi
 import com.example.kotlin.network.Resource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -9,10 +10,9 @@ import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 
 
-abstract class BaseRepository {
+abstract class BaseRepository(private val api: BaseApi) {
     suspend fun <T> safeApiCall(
-        apiCall: suspend () -> T
-    ): Resource<T> {
+        apiCall: suspend () -> T): Resource<T> {
         return withContext(Dispatchers.IO) {
             try {
                 Resource.Success(apiCall.invoke())
@@ -44,11 +44,7 @@ abstract class BaseRepository {
 
     }
 
-
-    suspend fun <T> safeApiCall2(apiCall: suspend () -> T): T {
-        return withContext(Dispatchers.IO) {
-            apiCall.invoke()
-
-        }
+    suspend fun logout() = safeApiCall {
+        api.logout()
     }
 }

@@ -1,13 +1,10 @@
 package com.example.kotlin.repository
 
-import com.example.kotlin.network.HttpRequest
+import com.example.kotlin.network.AuthHttpRequest
+import com.example.kotlin.network.UserApi
 
-class UserRepository(private val api: HttpRequest) : BaseRepository() {
-    suspend fun login(body: HashMap<String, String>) = safeApiCall {
-        api.login(body)
-    }
+class UserRepository(private val api: UserApi) : BaseRepository(api) {
+    suspend fun getLogin() = safeApiCall { api.loginUser() }
+    suspend fun registerUser() = safeApiCall { api.registerUser() }
 
-    suspend fun register(body: HashMap<String, String>) = safeApiCall {
-        api.register(body)
-    }
 }

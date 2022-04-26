@@ -5,10 +5,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.kotlin.dao.LoginResponse
+import com.example.kotlin.model.LoginResponse
 import com.example.kotlin.network.Resource
 import com.example.kotlin.network.Status
-import com.example.kotlin.repository.UserRepository
+import com.example.kotlin.repository.AuthRepository
 import com.example.kotlin.util.Constants
 import com.example.kotlin.util.UserPreferences
 import com.example.kotlin.util.UtilityMethods
@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class LoginViewModel @Inject constructor(
-    private val userRepository: UserRepository
+    private val repository: AuthRepository
 ) : ViewModel() {
     /**
      * The internal MutableLiveData that stores the status of the most recent request
@@ -46,7 +46,7 @@ class LoginViewModel @Inject constructor(
     private fun login(body: HashMap<String, String>) = viewModelScope.launch {
         _status.value = Status.LOADING
         try {
-            _loginResponse.value = userRepository.login(body)
+            _loginResponse.value = repository.login(body)
             _status.value = Status.SUCCESS
         } catch (e: Exception) {
             _status.value = Status.ERROR

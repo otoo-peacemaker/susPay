@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlin.R
-import com.example.kotlin.dao.TransactionDetails
+import com.example.kotlin.model.TransactionDetails
 
 class TransactionAdapter(private  val RList: List<TransactionDetails>): RecyclerView.Adapter<TransactionAdapter.ListViewHolder>() {
 

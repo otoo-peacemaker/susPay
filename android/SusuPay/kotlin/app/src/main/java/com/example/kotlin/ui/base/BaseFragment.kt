@@ -1,4 +1,4 @@
-package com.example.kotlin.ui.fragment
+package com.example.kotlin.ui.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,8 +16,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 @Suppress("UNCHECKED_CAST")
-abstract class BaseFragment<VM : ViewModel, viewBinding : ViewDataBinding, repository : BaseRepository> :
-    Fragment() {
+abstract class BaseFragment<VM : ViewModel, viewBinding : ViewDataBinding, R : BaseRepository> : Fragment() {
 
     protected lateinit var binding: viewBinding
     protected lateinit var viewModel: VM
@@ -36,17 +35,13 @@ abstract class BaseFragment<VM : ViewModel, viewBinding : ViewDataBinding, repos
         return binding.root
     }
 
-    abstract fun getFragmentBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?
-    ): ViewDataBinding
+    abstract fun getFragmentRepository(): R
 
-    abstract fun getFragmentRepository(): repository
+    abstract fun getFragmentBinding(inflater: LayoutInflater, container: ViewGroup?): ViewDataBinding
 
     abstract fun getViewModel(): Class<VM>
+
     abstract fun initializeViewModel():Job
-
-
 
     open suspend fun <T> runVM(block: () -> T):Job = withContext(Dispatchers.IO) {
         viewLifecycleOwner.lifecycleScope.launch {

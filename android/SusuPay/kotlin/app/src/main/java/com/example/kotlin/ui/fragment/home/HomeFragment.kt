@@ -5,43 +5,34 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.kotlin.R
 import com.example.kotlin.adapters.TransactionAdapter
-import com.example.kotlin.dao.TransactionDetails
-import com.example.kotlin.dao.TransactionType
+import com.example.kotlin.model.TransactionDetails
+import com.example.kotlin.model.TransactionType
 import com.example.kotlin.databinding.FragmentHomeBinding
+import com.example.kotlin.repository.UserRepository
+import com.example.kotlin.ui.base.BaseFragment
 import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.PercentFormatter
+import kotlinx.coroutines.Job
 
-class HomeFragment : Fragment() {
+class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding, UserRepository>() {
 
-    private var _binding: FragmentHomeBinding? = null
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        val homeViewModel =
-            ViewModelProvider(this)[HomeViewModel::class.java]
-
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        //val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            //textView.text = it
+         //val textView: TextView = binding.textHome
+        viewModel.text.observe(viewLifecycleOwner) {
+            with(binding){
+                textView.text = it
+            }
         }
-
         binding.recycler.layoutManager = LinearLayoutManager(this.context)
        //pass data into 4 rows in the recycler
         val transData = ArrayList <TransactionDetails>()
@@ -73,7 +64,6 @@ class HomeFragment : Fragment() {
         setPieData()
 
 
-        return root
     }
 
 
@@ -133,8 +123,21 @@ class HomeFragment : Fragment() {
 
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+
+    override fun getFragmentBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ): ViewDataBinding {
+        return DataBindingUtil.inflate(inflater, R.layout.fragment_home, container,false)
+    }
+
+    override fun getFragmentRepository(): UserRepository {
+     //   return UserRepository(remoteDataSource.buildApi(AuthHttpRequest::class.java))
+
+         TODO("Later Implementation")
+    }
+    override fun getViewModel() = HomeViewModel::class.java
+    override fun initializeViewModel(): Job {
+        TODO("Not yet implemented")
     }
 }

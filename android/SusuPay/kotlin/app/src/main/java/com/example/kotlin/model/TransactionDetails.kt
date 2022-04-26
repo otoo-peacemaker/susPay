@@ -1,6 +1,4 @@
-package com.example.kotlin.dao
-
-import io.reactivex.internal.operators.flowable.FlowableDelaySubscriptionOther
+package com.example.kotlin.model
 
 data class TransactionDetails(
     val type: String? = null,

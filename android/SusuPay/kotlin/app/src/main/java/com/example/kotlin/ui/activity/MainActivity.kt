@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             navController = navHostFragment.navController
 
             //Define appBarConfig: connect Nav component,
-            val topLevelDestination = setOf(R.id.landingFragment,R.id.splashFragment)//which id's should not have back <-
+            val topLevelDestination = setOf(R.id.landingFragment,R.id.splashFragment, R.id.loginFragment)//which id's should not have back <-
             val appBarConfiguration = AppBarConfiguration(topLevelDestination)//you can add your drawerLayout
 
             //connect Toolbar with NavController

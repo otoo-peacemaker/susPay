@@ -1,25 +1,60 @@
 package com.example.kotlin.repository.remote
 
-import com.example.kotlin.di.app.App
-import com.example.kotlin.util.Constants
+import android.content.Context
+import androidx.databinding.library.BuildConfig
+import com.example.kotlin.network.TokenAuthenticator
+import com.example.kotlin.network.TokenRefreshApi
+import okhttp3.Authenticator
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Inject
 
 
 class RemoteDataSource {
-    @Inject
-    lateinit var ok: OkHttpClient
+    class RemoteDataSource @Inject constructor() {
 
-    fun <Api> buildApi(api: Class<Api>): Api {
-        (App.instance as App).component
-            .inject(this)
-        return Retrofit.Builder()
-            .baseUrl(Constants.baseUrl)
-            .client(ok)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(api)
+        companion object {
+            private const val BASE_URL = "https://backend.aegisrider.com"
+        }
+
+        fun <T> buildApiServices(
+            api: Class<T>,
+            context: Context
+        ): T {
+            val authenticator = TokenAuthenticator(context, buildTokenApi())
+            return Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .client(getRetrofitClient(authenticator))
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(api)
+        }
+
+        private fun buildTokenApi(): TokenRefreshApi {
+            return Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .client(getRetrofitClient())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(TokenRefreshApi::class.java)
+        }
+
+        private fun getRetrofitClient(authenticator: Authenticator? = null): OkHttpClient {
+            return OkHttpClient.Builder()
+                .addInterceptor { chain ->
+                    chain.proceed(chain.request().newBuilder().also {
+                        it.addHeader("Accept", "application/json")
+                    }.build())
+                }.also { client ->
+                    authenticator?.let { client.authenticator(it) }
+                    if (BuildConfig.DEBUG) {
+                        val logging = HttpLoggingInterceptor()
+                        logging.setLevel(HttpLoggingInterceptor.Level.BODY)
+                        client.addInterceptor(logging)
+                    }
+                }.build()
+        }
     }
 }

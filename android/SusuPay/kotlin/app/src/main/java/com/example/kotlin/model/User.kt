@@ -1,4 +1,4 @@
-package com.example.kotlin.dao
+package com.example.kotlin.model
 
 
     data  class AuthData(
