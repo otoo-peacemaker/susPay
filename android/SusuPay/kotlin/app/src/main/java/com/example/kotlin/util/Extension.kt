@@ -9,13 +9,29 @@ import com.example.kotlin.ui.fragment.login.LoginFragment
 import com.example.kotlin.ui.fragment.register.RegistrationFragment
 import com.google.android.material.snackbar.Snackbar
 
-
+//generic function to start new activity
 fun <A : Activity> Activity.startNewActivity(activity: Class<A>) {
     Intent(this, activity).also {
         it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(it)
     }
 }
+
+/*//generic function to start new fragment
+fun <B : Fragment> Fragment.startNewFragment(fragment: Class<B>) {
+    Intent(this, fragment).also {
+        it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(it)
+    }
+}*/
+
+
+/*
+fun Fragment.logout() = lifecycleScope.launch {
+    if (activity is AppMainActivity) {
+        (activity as AppMainActivity).performLogout()
+    }
+}*/
 
 fun View.visible(isVisible: Boolean) {
     visibility = if (isVisible) View.VISIBLE else View.GONE

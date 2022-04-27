@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kotlin">
         <activity
-            android:name=".ui.activity.AppMainActivity" />
+            android:name=".ui.activity.AppMainActivity"
+            android:exported="true"/>
         <activity
             android:name=".ui.activity.MainActivity"
             android:exported="true">
