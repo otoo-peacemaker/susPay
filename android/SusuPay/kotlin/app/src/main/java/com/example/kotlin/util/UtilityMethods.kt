@@ -59,7 +59,7 @@ object UtilityMethods {
      */
 
     var megabits = 0.0
-    fun setTokenValue(token: String) {
+  /*  fun setTokenValue(token: String) {
         var tokenVal = ""
         val year =
             Calendar.getInstance()[Calendar.YEAR].toString()
@@ -68,7 +68,7 @@ object UtilityMethods {
             Constants.PreferenceConstants.TOKEN,
             tokenVal
         )
-    }
+    }*/
 
     @SuppressLint("SimpleDateFormat")
     fun parseDateTimeTodMMMyyyy(time: String?): String? {
@@ -152,7 +152,7 @@ object UtilityMethods {
         return filepath
     }
 
-    fun sendSMS(message: String, context: Context) {
+  /*  fun sendSMS(message: String, context: Context) {
 
 
         var jsonbody: JSONObject? = null
@@ -176,7 +176,7 @@ object UtilityMethods {
         intent.putExtra("sms_body", "AMZKDL $message")
         context.startActivity(intent)
     }
-
+*/
 
     fun hideKeyboard(context: Context, view: View) {
         // hide virtual keyboard
@@ -261,7 +261,7 @@ object UtilityMethods {
                 && conMan.activeNetworkInfo!!.isConnected)
     }
 
-    fun tokenValue(): String {
+  /*  fun tokenValue(): String {
         var tokenVal = ""
         val year = Calendar.getInstance()[Calendar.YEAR].toString()
         tokenVal =
@@ -269,7 +269,7 @@ object UtilityMethods {
         tokenVal =
             year + Constants.KeyToken + UserPreferences.getPreference(Constants.PreferenceConstants.TOKEN)
         return tokenVal
-    }
+    }*/
 
     /**
      * Validation of Phone Number

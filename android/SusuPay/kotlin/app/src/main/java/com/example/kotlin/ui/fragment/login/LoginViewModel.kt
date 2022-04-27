@@ -3,21 +3,21 @@ package com.example.kotlin.ui.fragment.login
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.kotlin.model.LoginResponse
 import com.example.kotlin.network.Resource
 import com.example.kotlin.network.Status
 import com.example.kotlin.repository.AuthRepository
-import com.example.kotlin.util.Constants
-import com.example.kotlin.util.UserPreferences
-import com.example.kotlin.util.UtilityMethods
+import com.example.kotlin.ui.base.BaseViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+
+@HiltViewModel
 class LoginViewModel @Inject constructor(
     private val repository: AuthRepository
-) : ViewModel() {
+) : BaseViewModel(repository) {
     /**
      * The internal MutableLiveData that stores the status of the most recent request
      * and The external immutable LiveData for the request status
@@ -40,7 +40,7 @@ class LoginViewModel @Inject constructor(
         get() = _loginResponse
 
     init {
-        Log.d(TAG,"Login view model initiated")
+        Log.d(TAG, "Login view model initiated")
     }
 
     private fun login(body: HashMap<String, String>) = viewModelScope.launch {
@@ -53,32 +53,29 @@ class LoginViewModel @Inject constructor(
         }
 
     }
-    fun loginOnClickListener(){
-         val paramObject = HashMap<String, String>()
-         paramObject["username"] = _username.value.toString()
-         paramObject["password"] = _password.value.toString()
+
+    fun loginOnClickListener() {
+        val paramObject = HashMap<String, String>()
+        paramObject["username"] = _username.value.toString()
+        paramObject["password"] = _password.value.toString()
         login(paramObject)
-        Log.i("Login","Login clicked")
+        Log.i("Login", "Login clicked")
     }
 
-      fun savePreference(value: LoginResponse) {
-        UtilityMethods.setTokenValue(value.authData.token)
-        UserPreferences.setPreference(
-            Constants.PreferenceConstants.USER_ID, value.authData.email
-        )
+    /*  fun savePreference(value: LoginResponse) {
+          UtilityMethods.setTokenValue(value.authData.token)
+          UserPreferences.setPreference(
+              Constants.PreferenceConstants.USER_ID, value.authData.email
+          )
 
-        UserPreferences.setPreference(
-            Constants.PreferenceConstants.USER_PASSWORD,
-            _password.value.toString()
-        )
+          UserPreferences.setPreference(
+              Constants.PreferenceConstants.USER_PASSWORD,
+              _password.value.toString()
+          )
+      }*/
+
+    companion object {
+        const val TAG = "LoginViewModel"
     }
 
-    companion object{
-        const val TAG="LoginViewModel"
-    }
-
-    override fun onCleared() {
-        super.onCleared()
-       // loginResponse.value = null
-    }
 }

@@ -1,3 +1,4 @@
+/*
 package com.example.kotlin.util
 
 import com.example.kotlin.di.app.App
@@ -29,4 +30,4 @@ object UserPreferences {
         if (value !== "")
             sharedPreferences!!.edit().putString(key, encrypt(value)).apply()
     }
-}
+}*/

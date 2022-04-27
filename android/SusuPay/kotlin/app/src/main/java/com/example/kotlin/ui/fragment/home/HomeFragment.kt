@@ -123,21 +123,18 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding, UserReposi
 
     }
 
-
     override fun getFragmentBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
     ): ViewDataBinding {
-        return DataBindingUtil.inflate(inflater, R.layout.fragment_home, container,false)
+        TODO("Not yet implemented")
     }
 
     override fun getFragmentRepository(): UserRepository {
-     //   return UserRepository(remoteDataSource.buildApi(AuthHttpRequest::class.java))
-
-         TODO("Later Implementation")
+        TODO("Not yet implemented")
     }
-    override fun getViewModel() = HomeViewModel::class.java
-    override fun initializeViewModel(): Job {
+
+    override fun getViewModel(): Class<HomeViewModel> {
         TODO("Not yet implemented")
     }
 }

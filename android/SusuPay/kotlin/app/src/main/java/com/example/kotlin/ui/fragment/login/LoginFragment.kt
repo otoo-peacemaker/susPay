@@ -9,17 +9,17 @@ import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.Observer
 import com.example.kotlin.R
 import com.example.kotlin.databinding.FragmentLoginBinding
-import com.example.kotlin.repository.UserRepository
+import com.example.kotlin.repository.AuthRepository
 import com.example.kotlin.ui.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.runBlocking
 
 @AndroidEntryPoint
-class LoginFragment : BaseFragment<LoginViewModel, FragmentLoginBinding, UserRepository>() {
+class LoginFragment : BaseFragment<LoginViewModel, FragmentLoginBinding, AuthRepository>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initializeViewModel()
+        //initializeViewModel()
 
         with(binding){
             loginBtn.setOnClickListener {
@@ -28,24 +28,18 @@ class LoginFragment : BaseFragment<LoginViewModel, FragmentLoginBinding, UserRep
         }
     }
 
-    override fun getFragmentBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?
+    override fun getFragmentBinding(inflater: LayoutInflater, container: ViewGroup?
     ): ViewDataBinding {
         return DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
     }
 
+    override fun getViewModel(): Class<LoginViewModel> {
+        return LoginViewModel::class.java
+    }
 
-    override fun getViewModel() = LoginViewModel::class.java
 
-    override fun initializeViewModel() = runBlocking {
-        println("What's the thread name? ${Thread.currentThread().name} ")
-        return@runBlocking runVM {
-            println("What's the thread name? ${Thread.currentThread().name} ")
-            viewModel.loginResponse.observe(viewLifecycleOwner, Observer {
-
-            })
-        }
+    override fun getFragmentRepository(): AuthRepository {
+        TODO("Not yet implemented")
     }
 
 

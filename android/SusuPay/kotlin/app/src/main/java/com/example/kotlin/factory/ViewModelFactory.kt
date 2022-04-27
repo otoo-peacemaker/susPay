@@ -9,10 +9,10 @@ import com.example.kotlin.ui.fragment.LandingViewModel
 import com.example.kotlin.ui.fragment.home.HomeViewModel
 import com.example.kotlin.ui.fragment.login.LoginViewModel
 import com.example.kotlin.ui.fragment.register.RegistrationViewModel
+import javax.inject.Inject
 
 @Suppress("UNCHECKED_CAST")
-class ViewModelFactory(private val repository: BaseRepository) :
-    ViewModelProvider.NewInstanceFactory() {
+class ViewModelFactory @Inject constructor(private val repository: BaseRepository) : ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return when {
@@ -25,7 +25,7 @@ class ViewModelFactory(private val repository: BaseRepository) :
             ) as T
 
             modelClass.isAssignableFrom(RegistrationViewModel::class.java) -> RegistrationViewModel(
-                repository as UserRepository
+                repository as AuthRepository
             ) as T
 
 

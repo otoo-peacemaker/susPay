@@ -12,39 +12,32 @@ import com.example.kotlin.factory.ViewModelFactory
 import com.example.kotlin.repository.BaseRepository
 import com.example.kotlin.repository.remote.RemoteDataSource
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.scopes.FragmentScoped
 
-@Suppress("UNCHECKED_CAST")
 @AndroidEntryPoint
-abstract class BaseFragment<VM : ViewModel, viewBinding : ViewDataBinding, repository : BaseRepository> :
-    Fragment() {
+abstract class HiltFragment : Fragment() {
 
-    protected lateinit var binding: viewBinding
-    protected lateinit var viewModel: VM
-
-    var remoteDataSource = RemoteDataSource()
-
+    open lateinit var binding: ViewDataBinding
+    open lateinit var viewModel: ViewModel
+    open var remoteDataSource = RemoteDataSource()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        binding = getFragmentBinding(inflater, container) as viewBinding
+        binding = getFragmentBinding(inflater, container)
         val factory = ViewModelFactory(getFragmentRepository())
         viewModel = ViewModelProvider(this, factory)[getViewModel()]
 
         return binding.root
     }
 
+
     abstract fun getFragmentBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
     ): ViewDataBinding
 
-
-    abstract fun getFragmentRepository(): repository
-
-    abstract fun getViewModel(): Class<VM>
-
+    abstract fun getFragmentRepository(): BaseRepository
+    abstract fun getViewModel(): Class<ViewModel>
 }
