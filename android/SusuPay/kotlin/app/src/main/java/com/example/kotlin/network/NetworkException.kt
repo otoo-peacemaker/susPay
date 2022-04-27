@@ -28,4 +28,5 @@ open class NetworkErrorException(
     }
 }
 
-class AuthenticationException(authMessage: String) : NetworkErrorException(errorMessage = authMessage) {}
+class AuthenticationException(authMessage: String) :
+    NetworkErrorException(errorMessage = authMessage)

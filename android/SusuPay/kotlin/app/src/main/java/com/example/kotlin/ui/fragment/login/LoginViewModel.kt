@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.kotlin.model.LoginResponse
 import com.example.kotlin.network.Resource
-import com.example.kotlin.network.Status
 import com.example.kotlin.repository.AuthRepository
 import com.example.kotlin.ui.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -18,13 +17,7 @@ import javax.inject.Inject
 class LoginViewModel @Inject constructor(
     private val repository: AuthRepository
 ) : BaseViewModel(repository) {
-    /**
-     * The internal MutableLiveData that stores the status of the most recent request
-     * and The external immutable LiveData for the request status
-     * */
-    private val _status = MutableLiveData<Status>()
-    val status: LiveData<Status>
-        get() = _status
+
 
     private val _username = MutableLiveData<String>()
     val username: LiveData<String>
@@ -44,14 +37,13 @@ class LoginViewModel @Inject constructor(
     }
 
     private fun login(body: HashMap<String, String>) = viewModelScope.launch {
-        _status.value = Status.LOADING
+
         try {
             _loginResponse.value = repository.login(body)
-            _status.value = Status.SUCCESS
-        } catch (e: Exception) {
-            _status.value = Status.ERROR
-        }
 
+        } catch (e: Exception) {
+
+        }
     }
 
     fun loginOnClickListener() {
@@ -61,18 +53,6 @@ class LoginViewModel @Inject constructor(
         login(paramObject)
         Log.i("Login", "Login clicked")
     }
-
-    /*  fun savePreference(value: LoginResponse) {
-          UtilityMethods.setTokenValue(value.authData.token)
-          UserPreferences.setPreference(
-              Constants.PreferenceConstants.USER_ID, value.authData.email
-          )
-
-          UserPreferences.setPreference(
-              Constants.PreferenceConstants.USER_PASSWORD,
-              _password.value.toString()
-          )
-      }*/
 
     companion object {
         const val TAG = "LoginViewModel"

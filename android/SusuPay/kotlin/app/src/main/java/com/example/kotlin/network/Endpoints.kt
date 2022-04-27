@@ -1,8 +1,6 @@
 package com.example.kotlin.network
 
 object Endpoints {
-    const val baseURL: String = "https://backend.aegisrider.com/"
-    const val devBaseURL: String = "https://devbackend.aegisrider.com/"
     const val registration: String = "auth/registration/"
     const val login: String = "auth/login/"
     const val lookUp: String = "auth/check-user/"

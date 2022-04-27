@@ -15,7 +15,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.scopes.FragmentScoped
 
 @Suppress("UNCHECKED_CAST")
-@AndroidEntryPoint
 abstract class BaseFragment<VM : ViewModel, viewBinding : ViewDataBinding, repository : BaseRepository> :
     Fragment() {
 

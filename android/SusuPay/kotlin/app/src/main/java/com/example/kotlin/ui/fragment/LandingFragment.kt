@@ -1,45 +1,29 @@
 package com.example.kotlin.ui.fragment
 
-import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.kotlin.R
 import com.example.kotlin.databinding.FragmentLandingBinding
-import com.example.kotlin.di.app.App
+import dagger.hilt.android.AndroidEntryPoint
 
-class LandingFragment : Fragment(){
-     private var _binding: FragmentLandingBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+@AndroidEntryPoint
+class LandingFragment : Fragment(R.layout.fragment_landing) {
+    private var _binding: FragmentLandingBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-      //  val landingViewModel = ViewModelProvider(this)[LandingViewModel::class.java]
-        _binding = FragmentLandingBinding.inflate(inflater, container, false)
-        with(binding){
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        _binding = FragmentLandingBinding.bind(view)
+
+        with(binding) {
             loginBtn.setOnClickListener {
                 findNavController().navigate(R.id.action_landingFragment_to_loginFragment)
             }
-              registerBtn.setOnClickListener {
+            registerBtn.setOnClickListener {
                 findNavController().navigate(R.id.action_landingFragment_to_registrationFragment)
             }
         }
-
-        return binding.root
     }
-
-   /* override fun onAttach(context: Context) {
-        super.onAttach(context)
-         ( App.instance as App).component.inject(this)
-    }*/
 }

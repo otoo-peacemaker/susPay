@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Inject
 
 
-class RemoteDataSource {
+
     class RemoteDataSource @Inject constructor() {
 
         companion object {
@@ -57,4 +57,3 @@ class RemoteDataSource {
                 }.build()
         }
     }
-}

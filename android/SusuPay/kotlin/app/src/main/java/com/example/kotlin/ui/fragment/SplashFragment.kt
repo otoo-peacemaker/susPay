@@ -12,19 +12,20 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.example.kotlin.R
+import com.example.kotlin.databinding.FragmentSplashBinding
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.WithFragmentBindings
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class SplashFragment : Fragment() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+@AndroidEntryPoint
+class SplashFragment : Fragment(R.layout.fragment_splash) {
+     private var _binding: FragmentSplashBinding ? = null
+    private val binding get() = _binding!!
 
-        /*viewLifecycleOwner.lifecycleScope.launch {
-            viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                delay(3000)
-                findNavController().navigate(R.id.action_splashFragment_to_landingFragment)
-            }
-        }*/
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        _binding = FragmentSplashBinding.bind(view)
 
 
         Handler(Looper.getMainLooper()).postDelayed({
@@ -32,11 +33,4 @@ class SplashFragment : Fragment() {
         }, 3000)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_splash, container, false)
-    }
 }

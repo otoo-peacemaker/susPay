@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.example.kotlin.R
 import com.example.kotlin.databinding.FragmentLoginBinding
@@ -15,32 +17,17 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.runBlocking
 
 @AndroidEntryPoint
-class LoginFragment : BaseFragment<LoginViewModel, FragmentLoginBinding, AuthRepository>() {
+class LoginFragment : Fragment(R.layout.fragment_login) {
+
+    private var _binding: FragmentLoginBinding? = null
+    private val binding get() = _binding!!
+
+    private val viewModel by viewModels<LoginViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //initializeViewModel()
+        _binding = FragmentLoginBinding.bind(view)
 
-        with(binding){
-            loginBtn.setOnClickListener {
-                viewModel.loginOnClickListener()
-            }
-        }
+
     }
-
-    override fun getFragmentBinding(inflater: LayoutInflater, container: ViewGroup?
-    ): ViewDataBinding {
-        return DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
-    }
-
-    override fun getViewModel(): Class<LoginViewModel> {
-        return LoginViewModel::class.java
-    }
-
-
-    override fun getFragmentRepository(): AuthRepository {
-        TODO("Not yet implemented")
-    }
-
-
 }
