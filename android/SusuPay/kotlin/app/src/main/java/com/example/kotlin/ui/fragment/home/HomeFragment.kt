@@ -37,12 +37,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding.recycler.layoutManager = LinearLayoutManager(this.context)
         //pass data into 4 rows in the recycler
         val transData = ArrayList<TransactionDetails>()
-        for (i in 1..4) {
+        for (i in 1..5) {
             transData.add(
                 TransactionDetails(
-                    TransactionType("Deposit").toString(),
+                    "deposit",
                     "12-09-21",
                     233456.00,
+                    "D"
                 )
             )
         }

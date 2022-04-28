@@ -19,7 +19,9 @@ import android.util.Patterns
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
+import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.Job
 import org.json.JSONObject
 import java.io.File
@@ -285,5 +287,9 @@ object UtilityMethods {
             }
         }
     }
+
+
+
+
 
 }

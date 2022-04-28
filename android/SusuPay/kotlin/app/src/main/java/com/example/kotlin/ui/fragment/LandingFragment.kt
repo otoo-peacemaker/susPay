@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.kotlin.R
 import com.example.kotlin.databinding.FragmentLandingBinding
+import com.example.kotlin.util.Extension.dialogCloseOnBackPress
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -25,5 +26,7 @@ class LandingFragment : Fragment(R.layout.fragment_landing) {
                 findNavController().navigate(R.id.action_landingFragment_to_registrationFragment)
             }
         }
+
+        dialogCloseOnBackPress()
     }
 }
