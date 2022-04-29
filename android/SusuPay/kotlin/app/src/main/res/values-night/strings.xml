@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permission_required_toast">permission required</string>
+    <string name="location_permission_denied">location permission denied</string>
+    <string name="permission_rationale_location">permission rational location</string>
+    <string name="log_in">Log in</string>
+    <string name="register">Register</string>
+    <string name="phone_number">Enter phone number</string>
+    <string name="password">Enter password</string>
+    <string name="have_an_account">Do you have an account?</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="terms_and_conditions">Terms And Conditions</string>
+    <string name="policy">"By submitting this application you confirm that you are authorized to share this information and agree with our "</string>
+    <string name="caution">Please fill in the form below and do not disclose your to anyone.</string>
+    <string name="app_policy">By submitting this application you confirm that you are authorized to share this information and agree with our</string>
+    <string name="verification">Verification</string>
+    <string name="verification_note">Verify the mobile number by entering the verification code sent to your mobile phone</string>
+    <string name="didn_t_recive_verification_code">Didn’t recive verification code?</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="submit">Submit</string>
+    <string name="next">Next</string>
+    <string name="verify_with_us">Verify that you\'ve signed with us</string>
+    <string name="reset">Reset</string>
+    <string name="reset_password">Reset password</string>
+    <string name="reset_note">Reset your password by entering new password</string>
+    <string name="active_balance">Active balance</string>
+    <string name="deposit">Deposit</string>
+    <string name="expenses">Expenses</string>
+    <string name="date_hyphen">-</string>
+    <string name="from">from</string>
+    <string name="to">to</string>
+    <string name="d">D</string>
+    <string name="type">type</string>
+    <string name="transaction_date">transaction date</string>
+    <string name="total_transaction">Total transaction</string>
+    <string name="percent_in_out">% in/out</string>
+    <string name="percent_deposit">% deposit</string>
+    <string name="percent_withdraw">% withdrawals</string>
+    <string name="Transaction">Transaction</string>
+    <string name="ghc_240000">Ghc 240000</string>
+    <string name="filter_date">Filter date</string>
+    <string name="help">help</string>
+
+</resources>

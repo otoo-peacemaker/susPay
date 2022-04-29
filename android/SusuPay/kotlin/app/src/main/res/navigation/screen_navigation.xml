@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth"
+    app:startDestination="@id/landingFragment">
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:label="Login"
+        android:name="com.example.kotlin.ui.fragment.login.LoginFragment"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_appMainActivity"
+            app:destination="@id/appMainActivity" />
+        <action
+            android:id="@+id/action_loginFragment_to_confirmNumberFragment"
+            app:destination="@id/confirmNumberFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.example.kotlin.ui.fragment.LandingFragment"
+        tools:layout="@layout/fragment_landing" >
+        <action
+            android:id="@+id/action_landingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.kotlin.ui.fragment.SplashFragment"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_landingFragment"
+            app:destination="@id/landingFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:label="Register"
+        android:name="com.example.kotlin.ui.fragment.register.RegistrationFragment"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registrationFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/appMainActivity"
+        tools:layout="@layout/activity_app_main"
+        android:name="com.example.kotlin.ui.activity.AppMainActivity"
+        android:label="AppMainActivity" />
+    <fragment
+        android:id="@+id/confirmNumberFragment"
+        android:name="com.example.kotlin.ui.fragment.confirm.ConfirmNumberFragment"
+        android:label="Confirm account"
+        tools:layout="@layout/fragment_confirm_number" >
+        <action
+            android:id="@+id/action_confirmNumberFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.example.kotlin.ui.fragment.reset.ResetPasswordFragment"
+        android:label="Reset password"
+        tools:layout="@layout/fragment_reset_password" >
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.example.kotlin.ui.fragment.verification.VerificationFragment"
+        android:label="verification"
+        tools:layout="@layout/fragment_verification" >
+        <action
+            android:id="@+id/action_verificationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.kotlin.ui.fragment.HelpFragment"
+        android:label="help"
+        tools:layout="@layout/fragment_help" />
+</navigation>
