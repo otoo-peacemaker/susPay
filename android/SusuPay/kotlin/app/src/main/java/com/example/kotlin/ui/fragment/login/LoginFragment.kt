@@ -7,9 +7,9 @@ import androidx.fragment.app.viewModels
 import com.example.kotlin.R
 import com.example.kotlin.databinding.FragmentLoginBinding
 import com.example.kotlin.ui.activity.AppMainActivity
-import com.example.kotlin.util.Extension.navControllerMethod
-import com.example.kotlin.util.Extension.onBackPressedState
-import com.example.kotlin.util.Extension.startNewActivity
+import com.example.kotlin.util.extensions.checkNavDestination
+import com.example.kotlin.util.extensions.navigateTo
+import com.example.kotlin.util.extensions.startNewActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -29,13 +29,22 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             loginBtn.setOnClickListener {
                 requireActivity().startNewActivity(AppMainActivity::class.java)
             }
+            registerBtn.setOnClickListener {
+                navigateTo(R.id.action_loginFragment_to_registrationFragment)
+            }
+            forgotPass.setOnClickListener {
+                navigateTo(R.id.action_loginFragment_to_confirmNumberFragment)
+            }
         }
+
     }
 
     override fun onStart() {
         super.onStart()
-        navControllerMethod(checkCurrentDestination)
+        checkNavDestination(checkCurrentDestination)
     }
+
+
 
     override fun onStop() {
         super.onStop()

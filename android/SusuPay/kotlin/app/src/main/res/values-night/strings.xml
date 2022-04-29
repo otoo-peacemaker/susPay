@@ -40,5 +40,6 @@
     <string name="Transaction">Transaction</string>
     <string name="ghc_240000">Ghc 240000</string>
     <string name="filter_date">Filter date</string>
+    <string name="help">help</string>
 
 </resources>

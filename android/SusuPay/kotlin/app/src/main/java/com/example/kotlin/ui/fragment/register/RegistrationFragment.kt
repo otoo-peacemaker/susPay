@@ -10,6 +10,7 @@ import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.kotlin.R
 import com.example.kotlin.databinding.FragmentRegistrationBinding
+import com.example.kotlin.util.extensions.navigateTo
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -22,6 +23,11 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentRegistrationBinding.bind(view)
+        with(binding){
+            sendVerification.setOnClickListener {
+                navigateTo(R.id.verificationFragment)
+            }
+        }
 
 
     }
