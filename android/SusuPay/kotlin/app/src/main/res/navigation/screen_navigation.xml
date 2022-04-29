@@ -66,7 +66,7 @@
     <fragment
         android:id="@+id/confirmNumberFragment"
         android:name="com.example.kotlin.ui.fragment.confirm.ConfirmNumberFragment"
-        android:label="Confirm number"
+        android:label="Confirm account"
         tools:layout="@layout/fragment_confirm_number" >
         <action
             android:id="@+id/action_confirmNumberFragment_to_resetPasswordFragment"
@@ -78,8 +78,8 @@
         android:label="Reset password"
         tools:layout="@layout/fragment_reset_password" >
         <action
-            android:id="@+id/action_resetPasswordFragment_to_appMainActivity"
-            app:destination="@id/appMainActivity" />
+            android:id="@+id/action_resetPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/verificationFragment"
